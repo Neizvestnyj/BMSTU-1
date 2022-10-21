@@ -1,0 +1,425 @@
+\documentclass[a4paper, 10pt]{article}
+\usepackage[T2A]{fontenc}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage[russian]{babel}
+\usepackage{amsfonts,amsmath,amssymb}
+\usepackage{mathrsfs}
+\usepackage{graphicx}
+\usepackage[normalem]{ulem}
+\usepackage{wrapfig}
+\usepackage{fancyhdr}
+\usepackage{floatflt}
+\usepackage{python}
+\usepackage{float}
+\usepackage{ amssymb }
+\usepackage{indentfirst}
+\usepackage{setspace}
+\usepackage{scrextend}
+\usepackage{listings}
+\usepackage{makecell,tabularx}
+\usepackage{hyperref}
+\usepackage{xcolor}
+
+\newcommand{\rub}{{\rm{Р}\kern-.635em\rule[.5ex]{.52em}{.04em}\kern.11em}}
+
+\definecolor{linkcolor}{HTML}{000000} 
+\definecolor{urlcolor}{HTML}{0000FF} 
+
+\hypersetup{pdfstartview=FitH,  linkcolor=linkcolor,urlcolor=urlcolor, colorlinks=true}
+
+\definecolor{grey}{RGB}{40, 40, 40}
+
+\renewcommand{\href}[1]{\url{#1}}
+
+\lstdefinestyle{CommentStyle}{
+    language=XML,
+    %numbers=left, numberstyle=\tiny, stepnumber=1, numbersep=5pt,
+    commentstyle=\color{red},
+	basicstyle=\footnotesize\ttfamily,
+	language={[ANSI]C++},
+	keywordstyle=\bfseries,
+	showstringspaces=false,
+	morekeywords={include, printf},
+	commentstyle={},
+	escapeinside=§§,
+	escapebegin=\begin{russian}\commentfont,
+	escapeend=\end{russian},
+    keywordstyle=\color{blue}\bfseries,
+    morekeywords={align,begin},
+    extendedchars=\true,
+    tabsize=2
+}
+\lstdefinestyle{myLatexStyle}{
+    language=c++,
+    %backgroundcolor=\color{grey},
+    numbers=left, numberstyle=\tiny, stepnumber=1, numbersep=5pt,
+    commentstyle=\color{red},
+    keywordstyle=\color{blue}\bfseries,
+    morekeywords={align,begin},
+    extendedchars=\true,
+    tabsize=2
+}
+
+\lstdefinestyle{pmyLatexStyle}{
+    language=java,
+    %backgroundcolor=\color{grey},
+    numbers=left, numberstyle=\tiny, stepnumber=1, numbersep=5pt,
+    commentstyle=\color{red},
+    keywordstyle=\color{blue}\bfseries,
+    morekeywords={align,begin},
+    extendedchars=\true,
+    tabsize=2
+}
+
+\setlength{\parindent}{12,5mm}
+
+\newcommand{\bvec}[1]{\overrightarrow{#1}}
+\newcommand{\mcol}[1]{\multicolumn{2}{c}{#1}}
+\newcommand{\mcolt}[1]{&#1&}
+
+\newcommand{\logo}{\vcenter{\hbox{\includegraphics[width=.8em]{/Users/pluttan/Documents/bw2.png}}}}
+\onehalfspacing
+
+\pagestyle{fancy}
+\renewcommand{\sectionmark}[1]{\markright{#1}}
+\fancyhf{} 
+\fancyhead[R]{\bfseries\thepage}
+\fancyhead[LO]{$\mathfrak{Copyright}\ \mathfrak{pluttan} \logo$}
+
+\newcommand{\image}[2]{
+	\begin{figure}[H]
+		\center{\includegraphics[height=#2pt]{img/#1} }
+    \end{figure}
+}
+
+\begin{document}
+
+\section{Базовые теоретические вопросы}
+
+\subsection{Дать определение равенства геометрических векторов.}
+
+Два вектора называются равными, если они сонаправлены и их длины равны.
+
+\subsection{Дать определения суммы векторов и произведения вектора на число.}
+
+\begin{center}
+\begin{tabular}{c c} 
+    \mcol{ Суммой двух векторов $\vec{a}$ и $\vec{b}$ называется такой вектор $\vec{c}$, 
+    построенный по следующим правилам}\\
+    Правило парралелограмма & Правило треугольника\\
+    \mcol{Пусть $O$ любая точка.}\\
+    \mcol{Отложим $\vec{a}$ от $O$. Получим $\bvec{OA}$.}\\
+    \mcol{Отложим $\vec{b}$ от}\\
+    Точки $O$ & Точки $A$\\
+    \mcol{Получим}\\
+\begin{minipage}[t]{0.4\linewidth}\image{1.png}{100}\end{minipage}&
+\begin{minipage}[t]{0.4\linewidth}\image{2.png}{100}\end{minipage}\\
+    \mcol{Построим}\\
+    Парралелограмм & Треугольник\\
+    \mcol{Вектор $\vec{c}$, представителем которого является $\bvec{OC}$ - искомый.}\\
+    \mcol{Построение не зависит от выбора точки $O$ и правила построения.}\\\\
+\end{tabular}
+\end{center}
+
+Произведением $\vec{a}$ на число $\alpha$ называется $\vec{b}$, если он коллинеарен $\vec{a}$
+(причем если $\vec{a} \upuparrows \vec{b}: \ \alpha > 0$, иначе $\alpha < 0$ ) и его 
+длина равна $|\alpha| |\vec{a}|$ 
+
+\subsection{Дать определения коллинеарных и компланарных векторов.}
+
+\begin{center}
+\begin{tabular}{c c} 
+    \mcol{Геометрические вектора называются}\\
+    Коллинеарными & Комплонарными\\
+    \mcol{Если они лежат }\\
+    На одной или парралельных прямых & На одной или парралельных плоскостях \\
+\end{tabular}
+\end{center}
+
+\subsection{Дать определение линейно зависимой и линейно независимой системы векторов.}
+
+\begin{center}
+\begin{tabular}{c c} 
+    \mcol{Векторы $\vec{a_1},...,\vec{a_n}$ назваются линейно}\\
+    Зависимыми & Независимыми\\
+    Если существует & Если не существует\\
+    \mcol{Их нетривиальная линейная комбинация, равная $\vec{0}$, т.е.}\\
+    \mcol{Если при $\alpha_1,...,\alpha_n \in \mathbb{R}, \ \alpha_1 \vec{a_1} +...+ \alpha_n \vec{a_n} = 0$ }\\
+    $\exists \alpha_1,...,\alpha_n$ отличные от нуля & $\nexists \alpha_1,...,\alpha_n$ отличные от нуля \\
+\end{tabular}
+\end{center}
+
+\subsection{Сформулировать геометрические критерии линейной зависимости 2-х и 3-х векторов.}
+
+2 вектора линейно зависимы $\iff$ они коллинеарны
+
+3 вектора линейно зависимы $\iff$ они комплонарны
+
+\subsection{Дать определение базиса и координат вектора.}
+
+\begin{center}
+\begin{tabular}{c c c} 
+    \mcolt{Базисом в пространстве}\\
+    $V_1$&$V_2$&$V_3$\\
+    \mcolt{Называется}\\
+    Любой ненулевой & Любая упорядоченная пара & Любая упорядоченная тройка\\
+    вектор & коллинеарных векторов & некомплонарных векторов\\
+    $\forall \vec{x} \in V_1 \exists ! x \in \mathbb{R}$&
+    $\forall \vec{x} \in V_2 \exists ! x_1, x_2 \in \mathbb{R}$&
+    $\forall \vec{x} \in V_3 \exists ! x_1, x_2, x_3 \in \mathbb{R}$\\
+    $\vec{x} = x\vec{e}$ & $\vec{x} = x_1\vec{e_1} + x_2\vec{e_2}$ &
+    $\vec{x} = x_1\vec{e_1} + x_2\vec{e_2} + x_3\vec{e_3}$\\
+    \mcolt{Коэффициенты разложения}\\
+    $x$&$x_1, x_2$&$x_1, x_2, x_3$\\
+    \mcolt{Называются координатами $\vec{x}$ в базисе}\\
+    $\vec{e}$&$\vec{e}_1, \vec{e}_2$&$\vec{e}_1, \vec{e}_2, \vec{e}_3$\\
+\end{tabular}
+\end{center}
+
+\subsection{Сформулировать теорему о разложении вектора по базису.}
+
+\begin{center}
+Любой вектор можно разложить по базису, причем единственным способом
+\begin{tabular}{c c c} 
+    $\forall \vec{x} \in V_1 \exists ! x \in \mathbb{R}$&
+    $\forall \vec{x} \in V_2 \exists ! x_1, x_2 \in \mathbb{R}$&
+    $forall \vec{x} \in V_3 \exists ! x_1, x_2, x_3 \in \mathbb{R}$\\
+\end{tabular}
+\end{center}
+
+\subsection{Дать определение ортогональной скалярной проекции вектора на направление.}
+
+Ортогональной проекцией вектора $\vec{a}$ на вектор $\vec{b}$ называется число, вычисленное по правилу:
+\begin{enumerate}
+    \item Отложим вектор $\vec{a}$ от любой точки $A$, получим $\bvec{AB}$
+    \item Возьмем любую ось $b$, направление которой совпадает с $\vec{b}$
+    \item Спроецируем $\bvec{AB}$ на $b$ и получим  $\bvec{A_{np}B_{np}}$
+    \item Найдем число $\pm |\bvec{A_{np}B_{np}}|$, где $+$ если $\bvec{A_{np}B_{np}} \upuparrows \vec{b}$, иначе $-$
+\end{enumerate}
+Обозначение $np_{\vec{b}} \vec{a}$
+
+\subsection{Дать определение скалярного произведения векторов.}
+
+Скалярным произведением 2 векторов $\vec{a}$ и $\vec{b}$ называется число, равное произведению длин
+векторов на косинус угла между ними.
+
+\subsection{Сформулировать свойство линейности скалярного произведения.}
+
+\begin{center}
+$\forall \vec{a}, \vec{b} \forall k \in \mathbb{R}$
+
+$(k\vec{a})\vec{b} = k(\vec{a}\vec{b})$
+
+$\vec{a}(k\vec{b}) = k(\vec{a}\vec{b})$\\
+
+$\forall \vec{a}, \vec{b}, \vec{c}$
+
+$(\vec{a} + \vec{b})\vec{c} = \vec{a}\vec{c} + \vec{b}\vec{c}$
+
+$\vec{a}(\vec{b} + \vec{c}) = \vec{a}\vec{b} + \vec{a}\vec{c}$
+\end{center}
+\subsection{Записать формулу для вычисления скалярного произведения двух векторов, заданных в ортонормированном базисе.}
+
+$$\vec{a}\vec{b} = \vec{a}_1\vec{b}_1 + \vec{a}_2\vec{b}_2 + \vec{a}_3\vec{b}_3,
+\vec{a}\{a_1;a_2;a_3\},\vec{b}\{b_1;b_2;b_3\} $$
+
+\subsection{Записать формулу для вычисления косинуса угла между векторами, заданными в ортонормированном базисе.}
+
+$$cos(\vec{a},\vec{b}) = \frac{ \vec{a} \vec{b} }{ |\vec{a}| |\vec{b}| } = 
+\frac{\vec{a}_1\vec{b}_1 + \vec{a}_2\vec{b}_2 + \vec{a}_3\vec{b}_3}
+{\sqrt{\vec{a}_1 + \vec{a}_2 + \vec{a}_3}\sqrt{\vec{b}_1+\vec{b}_2+\vec{b}_3}}$$
+
+\subsection{Дать определение правой и левой тройки векторов.}
+
+\begin{center}
+\begin{tabular}{c c} 
+
+    \mcol{Упорядоченная тройка некомплонарных векторов $\vec{a}, \vec{b}, \vec{с}$ называется }\\
+    Правой & Левой \\
+    \mcol{Если кратчайший поворот от $\vec{a}$ к $\vec{b}$ виден из конца $\vec{c}$ проходящей}\\
+    Против часовой стрелке & По часовой стрелке\\
+
+\end{tabular}
+\end{center}
+
+\subsection{Дать определение векторного произведения векторов.}
+
+Векторным произведением 2 векторов $\vec{a}$, $\vec{b}$ называется вектор $\vec{c}$, удовлетворяющих условиям
+\begin{enumerate}
+    \item $\vec{c} \perp \vec{a}, \vec{c} \perp \vec{b}$
+    \item Упорядоченная тройка $\vec{a}$, $\vec{b}$, $\vec{c}$ правая
+    \item $|\vec{c}| = |\vec{a}||\vec{b}|sin(\vec{a}, \vec{b})$
+\end{enumerate}
+
+\subsection{Сформулировать свойство коммутативности (симметричности) скалярного произведения 
+и свойство антикоммутативности (антисимметричности) векторного произведения.}
+
+\begin{center}
+$\forall \vec{a}, \vec{b}$
+
+$\vec{a}\vec{b} = \vec{b}\vec{a}$ - симметричность скалярного произведения
+
+$\vec{a} \times \vec{b} = - \vec{b} \times \vec{a}$ - кососимметричность векторного произведения
+\end{center}
+
+\subsection{Сформулировать свойство линейности векторного произведения векторов.}
+
+\begin{center}
+    $\forall \vec{a}, \vec{b} \forall k \in \mathbb{R}$
+    
+    $(k\vec{a}) \times \vec{b} = k(\vec{a} \times \vec{b})$
+    
+    $\vec{a} \times (k\vec{b}) = k(\vec{a} \times \vec{b})$\\
+    
+    $\forall \vec{a}, \vec{b}, \vec{c}$
+    
+    $(\vec{a} + \vec{b}) \times \vec{c} = \vec{a} \times \vec{c} + \vec{b} \times \vec{c}$
+    
+    $\vec{a} \times (\vec{b} + \vec{c}) = \vec{a} \times \vec{b} + \vec{a} \times \vec{c}$
+\end{center}
+
+\subsection{Записать формулу для вычисления векторного произведения в правом ортонормированном базисе.}
+
+\begin{center}
+$\vec{a} \times \vec{b} = 
+\begin{vmatrix}
+    \vec{i}&\vec{j}&\vec{k}\\
+    a_1 & a_2 & a_3\\
+    b_1 & b_2 & b_3
+\end{vmatrix} = \vec{i}
+\begin{vmatrix}
+    a_2 & a_3\\
+    b_2 & b_3
+\end{vmatrix} - \vec{j}
+\begin{vmatrix}
+    a_1 & a_3\\
+    b_1 & b_3
+\end{vmatrix} + \vec{k}
+\begin{vmatrix}
+    a_1 & a_2\\
+    b_1 & b_2
+\end{vmatrix}, \vec{a}\{a_1;a_2;a_3\},\vec{b}\{b_1;b_2;b_3\}$
+\end{center}
+
+\subsection{Дать определение смешанного произведения векторов.}
+
+Смешанным произведением 3 векторов $\vec{a}, \vec{b}, \vec{c}$ называется число, равное 
+$(\vec{a} \times \vec{b}) \vec{c}$
+
+Обозначение $(\vec{a}, \vec{b}, \vec{c})$, $\vec{a} \vec{b} \vec{c}$
+
+\subsection{Сформулировать свойство перестановки (кососимметричности) смешанного произведения.}
+
+При перестановке любых двух векторов, смешанное произведение меняет знак.
+
+$\forall \vec{a}, \vec{b}, \vec{c}:\vec{a} \vec{b} \vec{c} = - 
+\vec{b} \vec{a} \vec{c} = - \vec{c} \vec{b} \vec{a}$
+
+\subsection{Сформулировать свойство линейности смешанного произведения.}
+
+\begin{center}
+$\forall \vec{a}, \vec{b}, \vec{c}, \forall k \in \mathbb{R}$
+
+$(k\vec{a})\vec{b}\vec{c} = k(\vec{a}\vec{b}\vec{c})$
+
+$\vec{a}(k\vec{b})\vec{c} = k(\vec{a}\vec{b}\vec{c})$
+
+$\vec{a}\vec{b}(k\vec{c}) = k(\vec{a}\vec{b}\vec{c})$\\
+
+$\forall \vec{a}, \vec{b}, \vec{c}, \vec{d}$
+
+$(\vec{a}+\vec{d})\vec{b}\vec{c} = \vec{a}\vec{b}\vec{c} + \vec{d}\vec{b}\vec{c}$
+
+$\vec{a}(\vec{b}+\vec{d})\vec{c} = \vec{a}\vec{b}\vec{c} + \vec{a}\vec{d}\vec{c}$
+
+$\vec{a}\vec{b}(\vec{c}+\vec{d}) = \vec{a}\vec{b}\vec{c} + \vec{a}\vec{b}\vec{d}$
+\end{center}
+
+\subsection{Записать формулу для вычисления смешанного произведения в правом ортонормированном базисе.}
+
+$$\vec{a}\vec{b}\vec{c} = 
+\begin{vmatrix}
+    a_1 & a_2 & a_3\\
+    b_1 & b_2 & b_3\\
+    c_1 & c_2 & c_3
+\end{vmatrix} \ \vec{a}\{a_1;a_2;a_3\},
+\vec{b}\{b_1;b_2;b_3\}, \vec{c}\{c_1;c_2;c_3\}$$
+
+\subsection{Записать общее уравнение плоскости и уравнение «в отрезках». Объяснить 
+геометрический смысл входящих в эти уравнения параметров.}
+
+
+
+\subsection{Записать уравнение плоскости, проходящей через 3 данные точки.}
+
+
+
+\subsection{Записать условия параллельности и перпендикулярности плоскостей.}
+
+
+
+\subsection{Записать формулу для расстояния от точки до плоскости, заданной общим уравнением. }
+
+
+
+\subsection{Записать канонические и параметрические уравнения прямой в пространстве. 
+Объяснить геометрический смысл входящих в эти уравнения параметров.}
+
+
+
+\subsection{Записать уравнение прямой, проходящей через две данные точки в пространстве. }
+
+
+
+\subsection{Записать условие принадлежности двух прямых одной плоскости.}
+
+
+
+\subsection{Записать формулу для расстояния от точки до прямой в пространстве.}
+
+
+
+\subsection{Записать формулу для расстояния между скрещивающимися прямыми.}
+
+\section{Теоретические вопросы повышенной сложности}
+
+\subsection{Доказать геометрический критерий линейной зависимости трёх векторов.}
+
+
+
+\subsection{Доказать теорему о разложении вектора по базису.}
+
+
+
+\subsection{Доказать свойство линейности скалярного произведения.}
+
+
+
+\subsection{Вывести формулу для вычисления скалярного произведения векторов, заданных в ортонормированном базисе.}
+
+
+
+\subsection{Вывести формулу для вычисления векторного произведения в правом ортонормированном базисе.}
+
+
+
+\subsection{Доказать свойство линейности смешанного произведения.}
+
+
+
+\subsection{Вывести формулу для вычисления смешанного произведения трёх векторов в правом ортонормированном базисе.}
+
+
+
+\subsection{Вывести формулу для расстояния от точки до плоскости, заданной общим уравнением. }
+
+
+
+\subsection{Вывести формулу для расстояния от точки до прямой в пространстве.}
+
+
+
+\subsection{Вывести формулу для расстояния между скрещивающимися прямыми.}
+
+
+\end{document}
