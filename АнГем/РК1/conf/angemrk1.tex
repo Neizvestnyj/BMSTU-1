@@ -76,6 +76,14 @@
 \newcommand{\bvec}[1]{\overrightarrow{#1}}
 \newcommand{\mcol}[1]{\multicolumn{2}{c}{#1}}
 \newcommand{\mcolt}[1]{&#1&}
+\renewcommand{\a}{\vec{a}}
+\renewcommand{\b}{\vec{b}}
+\renewcommand{\c}{\vec{c}}
+\renewcommand{\d}{\vec{d}}
+\renewcommand{\i}{\vec{i}}
+\renewcommand{\j}{\vec{j}}
+\renewcommand{\k}{\vec{k}}
+\newcommand{\nul}{\vec{0}}
 
 \newcommand{\logo}{\vcenter{\hbox{\includegraphics[width=.8em]{/Users/pluttan/Documents/bw2.png}}}}
 \onehalfspacing
@@ -183,7 +191,7 @@
 \begin{tabular}{c c c} 
     $\forall \vec{x} \in V_1 \exists ! x \in \mathbb{R}$&
     $\forall \vec{x} \in V_2 \exists ! x_1, x_2 \in \mathbb{R}$&
-    $forall \vec{x} \in V_3 \exists ! x_1, x_2, x_3 \in \mathbb{R}$\\
+    $\forall \vec{x} \in V_3 \exists ! x_1, x_2, x_3 \in \mathbb{R}$\\
 \end{tabular}
 \end{center}
 
@@ -218,6 +226,7 @@ $(\vec{a} + \vec{b})\vec{c} = \vec{a}\vec{c} + \vec{b}\vec{c}$
 
 $\vec{a}(\vec{b} + \vec{c}) = \vec{a}\vec{b} + \vec{a}\vec{c}$
 \end{center}
+
 \subsection{Записать формулу для вычисления скалярного произведения двух векторов, заданных в ортонормированном базисе.}
 
 $$\vec{a}\vec{b} = \vec{a}_1\vec{b}_1 + \vec{a}_2\vec{b}_2 + \vec{a}_3\vec{b}_3,
@@ -385,31 +394,209 @@ $$\vec{a}\vec{b}\vec{c} =
 
 \subsection{Доказать геометрический критерий линейной зависимости трёх векторов.}
 
+3 вектора линейно зависимы $iff$ они комплонарны
 
+\subsubsection{Необходимость}
+
+Пусть $\vec{a}, \vec{b}, \vec{c}$ линейно зависимы, тогда один их них является линейной комбинацией
+остальных. К примеру $\vec{a} = \beta\vec{b} + \gamma\vec{c} (\beta,\gamma \in \mathbb{R})$
+Приложим $\vec{a}, \vec{b}, \vec{c}$ к одной точке $O$, получим $\bvec{OA}, \bvec{OB}, \bvec{OC}:$
+$\bvec{OA} = \beta\bvec{OB} + \gamma\bvec{OC}$. Тогда $\bvec{OA}$ диагонать парралелограмма.
+Следовательно $\bvec{OA}, \bvec{OB}, \bvec{OC}$ лежат в одной плоскости, значит они комплонарны,
+тогда и векторы $\vec{a}, \vec{b}, \vec{c}$ тоже комплонарны.
+\image{3.png}{200}
+
+\subsubsection{Достаточность}
+
+Пусть $\vec{a}, \vec{b}, \vec{c}$ комплонарны. Рассмотрим 2 случая:
+
+1. Хотя бы один нулевой $(\vec{a} = \vec{0})$. Тогда $\vec{a} = \vec{0}\vec{b} + \vec{0}\vec{c}$
+т.е. $\vec{a}$ является линейной комбинацией $\vec{b}, \vec{c}$ тогда по основной теореме
+$\vec{a}, \vec{b}, \vec{c}$ линейно зависимы. 
+
+2. Ни один не нулевой. Приложим $\vec{a}, \vec{b}, \vec{c}$ к одной точке $O$, 
+получим $\bvec{OA}, \bvec{OB}, \bvec{OC}$, которые лежат в одной плоскости.
+\image{3.png}{200}
+$\bvec{OA} = \bvec{OB_1} + \bvec{OC_1}$. Т.к. $\bvec{OB}, \bvec{OB_1}$ коллинеарны, то
+$\bvec{OB_1} = \beta\bvec{OB}$, аналогично $\bvec{OC_1} = \beta\bvec{OC}$ 
+$\vec{a} = \beta\vec{b} + \gamma\vec{c}$, тогда $\vec{a}, \vec{b}, \vec{c}$ линейно зависимы.
 
 \subsection{Доказать теорему о разложении вектора по базису.}
 
+\begin{center}
+Любой вектор можно разложить по базису, причем единственным способом
+\begin{tabular}{c c c} 
+    $\forall \vec{x} \in V_1 \exists ! x \in \mathbb{R}$&
+    $\forall \vec{x} \in V_2 \exists ! x_1, x_2 \in \mathbb{R}$&
+    $\forall \vec{x} \in V_3 \exists ! x_1, x_2, x_3 \in \mathbb{R}$\\
+\end{tabular}
+\end{center}
 
+\subsubsection{Существование}
+
+Из геометрических критериев следует, что 4 вектора $\vec{x}, \vec{e_1}, \vec{e_2}, \vec{e_3}$.
+Тогда $\exists \alpha_0, \alpha_1, \alpha_2, \alpha_3$ (не все равны нулю), что
+$\alpha_0\vec{x} + \alpha_1\vec{e_1} + \alpha_2\vec{e_2} + \alpha_3\vec{e_3} = \vec{0} (1)$.
+Тогда по определению линейно зависимых $\vec{e_1}, \vec{e_2}, \vec{e_3}$ линейно зависимы,
+т.е. комплонарны. $\vec{e_1}, \vec{e_2}, \vec{e_3}$ - базис в $V_3$ $\alpha_0 \ne 0$.
+Умножим (1) на $\frac{1}{\alpha_0}$ и выразим $\vec{x}$. 
+$\vec{x} = -\frac{\alpha_1}{\alpha_0}\vec{e_1}-\frac{\alpha_2}{\alpha_0}\vec{e_2}
+-\frac{\alpha_3}{\alpha_0}\vec{e_3}$. Пусть $-\frac{\alpha_i}{\alpha_0} = x_i$, тогда
+$\vec{x} = x_1\vec{e_1} + x_2\vec{e_2} + x_3\vec{e_3}$
+
+\subsubsection{Единственность}
+
+От противного. Пусть существуют 2 разложения для 
+$\vec{x}: \vec{x} = x_1\vec{e_1} + x_2\vec{e_2} + x_3\vec{e_3};$
+$\vec{x} = y_1\vec{e_1} + y_2\vec{e_2} + y_3\vec{e_3}$
+Рассмотрим разность $\vec{0} = \vec{x} - \vec{x} = 
+(x_1 - y_1)\vec{e_1} + (x_2 - y_2)\vec{e_2} + (x_3 - y_3)\vec{e_3}$ - линейная комбинация 
+$\vec{e_1}, \vec{e_2}, \vec{e_3}$. Т.к. $\vec{e_1}, \vec{e_2}, \vec{e_3}$ не комплонарны
+тогда их линейная комбинация равна $\vec{0}$, $x_1 - y_1 = 0$ $x_2 - y_2 = 0$ $x_3 - y_3 = 0$
+Получили $x_1 = y_1$ $x_2 = y_2$ $x_3 = y_3$ разложение единственно.
 
 \subsection{Доказать свойство линейности скалярного произведения.}
 
+\begin{center}
+    $\forall \vec{a}, \vec{b}, \vec{c} \forall k \in \mathbb{R}$
+\end{center}
 
+\subsubsection{$(k\vec{a})\vec{b} = k(\vec{a}\vec{b})$}
+
+1. $\vec{b} = \vec{0}$ левая часть $ = (k\vec{a})\vec{0} = \vec{0}$, правая часть $ = k(\vec{a}\vec{0}) = \vec{0}$
+
+2. $\vec{b} \ne \vec{0}$ левая часть $ = (k\vec{a})\vec{b} = \vec{b}(k\vec{a}) = |\vec{b}|np_{\vec{b}}(k\vec{a}) =
+k|\vec{b}|np_{\vec{b}}(\vec{a}) = k(\vec{b}\vec{a}) = k(\vec{a}\vec{b}) = $ правая часть
+
+\subsubsection{$\vec{a}(k\vec{b}) = k(\vec{a}\vec{b})$}
+
+Левая часть $ = \vec{a}(k\vec{b}) = (k\vec{b})\vec{a} = k(\vec{a}\vec{b}) = $ правая часть
+
+\subsubsection{$(\vec{a} + \vec{b})\vec{c} = \vec{a}\vec{c} + \vec{b}\vec{c}$}
+
+1. $\vec{c} = \vec{0}$ левая часть $ = (\vec{a} + \vec{b})\vec{c} = \vec{0}$, 
+правая часть $ = \vec{a}\vec{0} + \vec{b}\vec{0} = \vec{0}$
+
+2. $\vec{c} \ne \vec{0}$ левая часть $ = \vec{c}(\vec{a} + \vec{b}) = |\vec{c}|np_{\vec{c}}(\vec{a} + \vec{b}) =
+|\vec{c}|(np_{\vec{c}}\vec{a} + np_{\vec{c}}\vec{b}) = \vec{c}\vec{a} + \vec{c}\vec{b} = 
+\vec{a}\vec{c} + \vec{b}\vec{c} = $ правая часть
+
+\subsubsection{$\vec{a}(\vec{b} + \vec{c}) = \vec{a}\vec{b} + \vec{a}\vec{c}$}
+
+Левая часть $ = \vec{a}(\vec{b} + \vec{c}) = (\vec{b} + \vec{c})\vec{a} = 
+\vec{a}\vec{b} + \vec{a}\vec{c} = $ правая часть
 
 \subsection{Вывести формулу для вычисления скалярного произведения векторов, заданных в ортонормированном базисе.}
 
+$$\a\b = a_1b_1 + a_2b_2 + a_3b_3$$
 
+Распишем по свойствам линейности $$\a\b = (a_1\i + a_2\j + a_3\k)(b_1\i + b_2\j + b_3\k) = 
+a_1b_1(\i\i) + a_1b_2(\i\j) + a_1b_3(\i\k) + a_2b_1(\j\i) + a_2b_2(\j\j) +a_2b_3(\j\k)+
+a_3b_1(\k\i) + a_3b_2(\k\j) + a_3b_3(\k\k) = |\i\i=1,\i\j=0,\i\k=0,\j\j=1,\j\k=0,\k\k=0| = a_1b_1 + a_2b_2 + a_3b_3$$
 
 \subsection{Вывести формулу для вычисления векторного произведения в правом ортонормированном базисе.}
 
+\begin{center}
+$\vec{a} \times \vec{b} = 
+\begin{vmatrix}
+    \vec{i}&\vec{j}&\vec{k}\\
+    a_1 & a_2 & a_3\\
+    b_1 & b_2 & b_3
+\end{vmatrix} = \vec{i}
+\begin{vmatrix}
+    a_2 & a_3\\
+    b_2 & b_3
+\end{vmatrix} - \vec{j}
+\begin{vmatrix}
+    a_1 & a_3\\
+    b_1 & b_3
+\end{vmatrix} + \vec{k}
+\begin{vmatrix}
+    a_1 & a_2\\
+    b_1 & b_2
+\end{vmatrix}, \vec{a}\{a_1;a_2;a_3\},\vec{b}\{b_1;b_2;b_3\}$
+\end{center}
 
+$$\a \times \b = (a_1\i + a_2\j + a_3\k)\times(b_1\i + b_2\j + b_3\k)  = 
+a_1b_1(\i\times\i) + a_1b_2(\i\times\j) + a_1b_3(\i\times\k) + a_2b_1(\j\times\i) + 
+a_2b_2(\j\times\j) +a_2b_3(\j\times\k)+a_3b_1(\k\times\i) + a_3b_2(\k\times\j) + 
+a_3b_3(\k\times\k) = |\i\times\i = \nul, \i\times\j = \k, \i\times\k = -\j, \j\times\i = -\k, 
+\j\times\j = \nul, \j\times\k = \i, \k\times\i = \j, \k\times\j = -\i,\k\times\k = \nul|=
+\i(\a_2\b_3+\a_3\b_2) + \j(\a_1\b_3+\a_3\b_1) + \k(\a_1\b_2+\a_2\b_1) = \vec{i}
+\begin{vmatrix}
+    a_2 & a_3\\
+    b_2 & b_3
+\end{vmatrix} - \vec{j}
+\begin{vmatrix}
+    a_1 & a_3\\
+    b_1 & b_3
+\end{vmatrix} + \vec{k}
+\begin{vmatrix}
+    a_1 & a_2\\
+    b_1 & b_2
+\end{vmatrix}  = 
+\begin{vmatrix}
+    \vec{i}&\vec{j}&\vec{k}\\
+    a_1 & a_2 & a_3\\
+    b_1 & b_2 & b_3
+\end{vmatrix}$$
 
 \subsection{Доказать свойство линейности смешанного произведения.}
 
+\begin{center}
+    $\forall \vec{a}, \vec{b}, \vec{c},\vec{d} \forall k \in \mathbb{R}$
+\end{center}
 
+\subsubsection{$(k\vec{a})\vec{b}\vec{c} = k(\vec{a}\vec{b}\vec{c})$}
+$$(k\a)\b\c = ((k\a)\times\b)\c = (k(\a\times\b))\c = k((\a\times\b)\c) = k(\vec{a}\vec{b}\vec{c})$$
+
+\subsubsection{$\vec{a}(k\vec{b})\vec{c} = k(\vec{a}\vec{b}\vec{c})$}
+$$\a(k\b)\c = (k\b)\c\a = k(\b\c\a) = k(\a\b\c)$$
+
+\subsubsection{$\vec{a}\vec{b}(k\vec{c}) = k(\vec{a}\vec{b}\vec{c})$}
+$$\a\b(k\c) = (k\c)\a\b = k(\c\a\b) = k(\a\b\c)$$
+
+\subsubsection{$(\vec{a}+\vec{d})\vec{b}\vec{c} = \vec{a}\vec{b}\vec{c} + \vec{d}\vec{b}\vec{c}$}
+$$(\a+\d)\b\c = ((\a+\d)\times\b)\c = (\a\times\b+\d\times\b)\c = \a\b\c+\d\b\c$$
+
+\subsubsection{$\vec{a}(\vec{b}+\vec{d})\vec{c} = \vec{a}\vec{b}\vec{c} + \vec{a}\vec{d}\vec{c}$}
+$$\a(\b+\d)\c = (\b+\d)\c\a = \b\c\a + \d\c\a = \a\b\c + \a\d\c$$
+
+\subsubsection{$\vec{a}\vec{b}(\vec{c}+\vec{d}) = \vec{a}\vec{b}\vec{c} + \vec{a}\vec{b}\vec{d}$}
+$$\a\b(\c+\d) = (\c+\d)\a\b = \c\a\b+\d\a\b = \a\b\c + \a\b\d$$
 
 \subsection{Вывести формулу для вычисления смешанного произведения трёх векторов в правом ортонормированном базисе.}
 
-
+$$\a\b\c = (\a\times\b)\c = (\vec{i}
+\begin{vmatrix}
+    a_2 & a_3\\
+    b_2 & b_3
+\end{vmatrix} - \vec{j}
+\begin{vmatrix}
+    a_1 & a_3\\
+    b_1 & b_3
+\end{vmatrix} + \vec{k}
+\begin{vmatrix}
+    a_1 & a_2\\
+    b_1 & b_2
+\end{vmatrix})\c = c_1
+\begin{vmatrix}
+    a_2 & a_3\\
+    b_2 & b_3
+\end{vmatrix} - c_2
+\begin{vmatrix}
+    a_1 & a_3\\
+    b_1 & b_3
+\end{vmatrix} + c_3
+\begin{vmatrix}
+    a_1 & a_2\\
+    b_1 & b_2
+\end{vmatrix}  = 
+\begin{vmatrix}
+    a_1 & a_2 & a_3\\
+    b_1 & b_2 & b_3\\
+    c_1 & c_2 & c_3
+\end{vmatrix}$$
 
 \subsection{Вывести формулу для расстояния от точки до плоскости, заданной общим уравнением. }
 
