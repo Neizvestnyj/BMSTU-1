@@ -541,9 +541,9 @@ k|\b|np_{\b}(\a) = k(\b\a) = k(\a\b) = $ правая часть
 
 $$\a\b = a_1b_1 + a_2b_2 + a_3b_3$$
 
-Распишем по свойствам линейности $$\a\b = (a_1\i + a_2\j + a_3\k)(b_1\i + b_2\j + b_3\k) = 
+Распишем по свойствам линейности $\a\b = (a_1\i + a_2\j + a_3\k)(b_1\i + b_2\j + b_3\k) = 
 a_1b_1(\i\i) + a_1b_2(\i\j) + a_1b_3(\i\k) + a_2b_1(\j\i) + a_2b_2(\j\j) +a_2b_3(\j\k)+
-a_3b_1(\k\i) + a_3b_2(\k\j) + a_3b_3(\k\k) = |\i\i=1,\i\j=0,\i\k=0,\j\j=1,\j\k=0,\k\k=0| = a_1b_1 + a_2b_2 + a_3b_3$$
+a_3b_1(\k\i) + a_3b_2(\k\j) + a_3b_3(\k\k) = |\i\i=1,\i\j=0,\i\k=0,\j\j=1,\j\k=0,\k\k=0| = a_1b_1 + a_2b_2 + a_3b_3$
 
 \subsection{Вывести формулу для вычисления векторного произведения в правом ортонормированном базисе.}
 
@@ -568,7 +568,7 @@ $\a \times \b =
 \end{vmatrix}, \a\{a_1;a_2;a_3\},\b\{b_1;b_2;b_3\}$
 \end{center}
 
-$$\a \times \b = (a_1\i + a_2\j + a_3\k)\times(b_1\i + b_2\j + b_3\k)  = 
+$\a \times \b = (a_1\i + a_2\j + a_3\k)\times(b_1\i + b_2\j + b_3\k)  = 
 a_1b_1(\i\times\i) + a_1b_2(\i\times\j) + a_1b_3(\i\times\k) + a_2b_1(\j\times\i) + 
 a_2b_2(\j\times\j) +a_2b_3(\j\times\k)+a_3b_1(\k\times\i) + a_3b_2(\k\times\j) + 
 a_3b_3(\k\times\k) = |\i\times\i = \nul, \i\times\j = \k, \i\times\k = -\j, \j\times\i = -\k, 
@@ -590,7 +590,7 @@ a_3b_3(\k\times\k) = |\i\times\i = \nul, \i\times\j = \k, \i\times\k = -\j, \j\t
     \i&\j&\k\\
     a_1 & a_2 & a_3\\
     b_1 & b_2 & b_3
-\end{vmatrix}$$
+\end{vmatrix}$
 
 \subsection{Доказать свойство линейности смешанного произведения.}
 
@@ -651,13 +651,93 @@ $$\a\b\c = (\a\times\b)\c = (\i
 
 \subsection{Вывести формулу для расстояния от точки до плоскости, заданной общим уравнением. }
 
+$$\begin{cases}\pi:Ax + By + Cz + D =0\\M_0(x_0, y_0, z_0)\end{cases}:
+    \rho (M_0, \pi) = \frac{ |Ax_0 + By_0 + Cz_0 + D| }{\sqrt{A^2+B^2+C^2}}$$
 
+1. $\rho(M_0, \pi) = |\bvec{HM_0}|$, где $\bvec{HM_0}\{x_0-x_H,y_0-y_H,z_0-z_H,\}$
+
+Пусть $\vec{n}$ - нормаль. Тогда $\vec{n}\bvec{HM_0} = |\vec{n}||\bvec{HM_0}|cos(\vec{n}, 
+\bvec{HM_0}) = \pm|\vec{n}||\bvec{HM_0}| \rightarrow |\vec{n}\bvec{HM_0}| = 
+|\vec{n}||\bvec{HM_0}|, |\bvec{HM_0}| = \frac{ |\vec{n}\bvec{HM_0}| }{ |\vec{n}| }$
+
+2. Знаменатель $|\vec{n}| = \sqrt{A^2+B^2+C^2}$
+
+3. Числитель $\vec{n}\bvec{HM_0} = A(x_0-x_H)+B(y_0-y_H)+C(z_0-z_H) = Ax_0 + By_0 
++ Cz_0 - (Ax_H + By_H + Cz_H) = Ax_0 + By_0 + Cz_0 + D$
+
+4. $|\bvec{HM_0}| = \rho (M_0, \pi) = \frac{ |Ax_0 + By_0 + Cz_0 + D| }{\sqrt{A^2+B^2+C^2}}$
 
 \subsection{Вывести формулу для расстояния от точки до прямой в пространстве.}
 
+Пусть $l_1$(задан точкой $M_1(x_1, y_1, z_1)$ и направляющим вектором $\vec{m}_1\{a,b,c\}$) и точка 
+$M_0(x_0,y_0,z_0)$ тогда 
+$$\rho(M_0, l_1) = \frac{ |\bvec{M_1M_0}\times\vec{m}| }{ |\vec{m}| } = 
+\frac{\sqrt{\begin{vmatrix}y_0-y_1&z_0-z_1\\b&c\end{vmatrix}^2+
+\begin{vmatrix}x_0-x_1&z_0-z_1\\a&c\end{vmatrix}^2+
+\begin{vmatrix}x_0-x_1&y_0-y_1\\a&b\end{vmatrix}^2}}{\sqrt{a^2+b^2+c^2}}$$
 
+1. Рассмотрим праллелограмм построенный на  $\bvec{M_1M_0}$ и $\vec{m}$
+$\rho(M_0, l_1) = h$, где $h$ высота парралелограмма.
+$h = \frac{S}{ |\vec{m}| } = \frac{ |\bvec{M_1M_0} \times \vec{m}| }{ |\vec{m}| }$
+
+2. Знаменатель $|\vec{m}| = \sqrt{a^2+b^2+c^2}$
+
+3. Числитель $|\bvec{M_1M_0} \times \vec{m}| = |\begin{vmatrix}\i&\j&\k\\x_0-x_1&y_0-y_1&z_0-z_1\\a&b&c\end{vmatrix}| = 
+|\begin{vmatrix}y_0-y_1&z_0-z_1\\b&c\end{vmatrix}\i-
+\begin{vmatrix}x_0-x_1&z_0-z_1\\a&c\end{vmatrix}\j+
+\begin{vmatrix}x_0-x_1&y_0-y_1\\a&b\end{vmatrix}\k|=
+\sqrt{\begin{vmatrix}y_0-y_1&z_0-z_1\\b&c\end{vmatrix}^2+
+\begin{vmatrix}x_0-x_1&z_0-z_1\\a&c\end{vmatrix}^2+
+\begin{vmatrix}x_0-x_1&y_0-y_1\\a&b\end{vmatrix}^2}$
+
+4.$h = \rho(M_0, l_1) = \frac{ |\bvec{M_1M_0}\times\vec{m}| }{ |\vec{m}| } = 
+\frac{\sqrt{\begin{vmatrix}y_0-y_1&z_0-z_1\\b&c\end{vmatrix}^2+
+\begin{vmatrix}x_0-x_1&z_0-z_1\\a&c\end{vmatrix}^2+
+\begin{vmatrix}x_0-x_1&y_0-y_1\\a&b\end{vmatrix}^2}}{\sqrt{a^2+b^2+c^2}}$
 
 \subsection{Вывести формулу для расстояния между скрещивающимися прямыми.}
 
+Пусть $l_1$(задан точкой $M_1(x_1, y_1, z_1)$ и направляющим вектором $\vec{m}_1\{a_1,b_1,c_1\}$) и 
+$l_2$(Задан точкой $M_2(x_2, y_2, z_2)$ и направляющим вектором$\vec{m}_2\{a_2,b_2,c_2\}$)
+
+$$\rho(l_1, l_2) = \frac{ |\bvec{M_1M_2}\vec{m_1}\vec{m_2}| }{ |\vec{m_1}\times\vec{m_2}| }=
+\frac{ |\begin{vmatrix}x_2-x_1&y_2-y_1&z_2-z_1\\a_1&b_1&c_1\\a_2&b_2&c_2\end{vmatrix}| }
+    {\sqrt{\begin{vmatrix}b_1&c_1\\b_2&c_2\end{vmatrix}^2+
+    \begin{vmatrix}a_1&c_1\\a_2&c_2\end{vmatrix}^2+
+    \begin{vmatrix}a_1&b_1\\a_2&b_2\end{vmatrix}^2}}$$
+
+1. Рассмотрим парралелипипед, построенный на $\bvec{M_1M_2}, \vec{m_1}, \vec{m_2}$
+Пусть $\pi_1$ и $\pi_2$ плоскости нижнего и верхнего оснований, тогда $\rho(l_1, l_2) = h$ парралелипипеда
+$h = \frac{V}{S} = \frac{ |\bvec{M_1M_2}\vec{m_1}\vec{m_2}| }{ |\vec{m_1}\times\vec{m_2}| }$
+
+2.Числитель $|\bvec{M_1M_2}\vec{m_1}\vec{m_2}| =  |\begin{vmatrix}x_2-x_1&y_2-y_1&z_2-z_1\\
+a_1&b_1&c_1\\a_2&b_2&c_2\end{vmatrix}|$
+
+3. Знаменатель $|\vec{m_1}\times\vec{m_2}| = |\begin{vmatrix}
+    \i&\j&\k\\
+    a_1 & a_2 & a_3\\
+    b_1 & b_2 & b_3
+\end{vmatrix}| = |\i
+\begin{vmatrix}
+    a_2 & a_3\\
+    b_2 & b_3
+\end{vmatrix} - \j
+\begin{vmatrix}
+    a_1 & a_3\\
+    b_1 & b_3
+\end{vmatrix} + \k
+\begin{vmatrix}
+    a_1 & a_2\\
+    b_1 & b_2
+\end{vmatrix}| = $ \\
+$=\sqrt{\begin{vmatrix}b_1&c_1\\b_2&c_2\end{vmatrix}^2+
+\begin{vmatrix}a_1&c_1\\a_2&c_2\end{vmatrix}^2+
+\begin{vmatrix}a_1&b_1\\a_2&b_2\end{vmatrix}^2}$
+
+4. $h = \rho(l_1, l_2) = \frac{ |\bvec{M_1M_2}\vec{m_1}\vec{m_2}| }{ |\vec{m_1}\times\vec{m_2}| }=
+\frac{ |\begin{vmatrix}x_2-x_1&y_2-y_1&z_2-z_1\\a_1&b_1&c_1\\a_2&b_2&c_2\end{vmatrix}| }
+    {\sqrt{\begin{vmatrix}b_1&c_1\\b_2&c_2\end{vmatrix}^2+
+    \begin{vmatrix}a_1&c_1\\a_2&c_2\end{vmatrix}^2+
+    \begin{vmatrix}a_1&b_1\\a_2&b_2\end{vmatrix}^2}}$
 
 \end{document}
