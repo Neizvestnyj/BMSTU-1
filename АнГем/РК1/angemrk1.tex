@@ -112,26 +112,26 @@
 
 \begin{center}
 \begin{tabular}{c c} 
-    \mcol{ Суммой двух векторов $\vec{a}$ и $\vec{b}$ называется такой вектор $\vec{c}$, 
+    \mcol{ Суммой двух векторов $\a$ и $\b$ называется такой вектор $\c$, 
     построенный по следующим правилам}\\
     Правило парралелограмма & Правило треугольника\\
     \mcol{Пусть $O$ любая точка.}\\
-    \mcol{Отложим $\vec{a}$ от $O$. Получим $\bvec{OA}$.}\\
-    \mcol{Отложим $\vec{b}$ от}\\
+    \mcol{Отложим $\a$ от $O$. Получим $\bvec{OA}$.}\\
+    \mcol{Отложим $\b$ от}\\
     Точки $O$ & Точки $A$\\
     \mcol{Получим}\\
 \begin{minipage}[t]{0.4\linewidth}\image{1.png}{100}\end{minipage}&
 \begin{minipage}[t]{0.4\linewidth}\image{2.png}{100}\end{minipage}\\
     \mcol{Построим}\\
     Парралелограмм & Треугольник\\
-    \mcol{Вектор $\vec{c}$, представителем которого является $\bvec{OC}$ - искомый.}\\
+    \mcol{Вектор $\c$, представителем которого является $\bvec{OC}$ - искомый.}\\
     \mcol{Построение не зависит от выбора точки $O$ и правила построения.}\\\\
 \end{tabular}
 \end{center}
 
-Произведением $\vec{a}$ на число $\alpha$ называется $\vec{b}$, если он коллинеарен $\vec{a}$
-(причем если $\vec{a} \upuparrows \vec{b}: \ \alpha > 0$, иначе $\alpha < 0$ ) и его 
-длина равна $|\alpha| |\vec{a}|$ 
+Произведением $\a$ на число $\alpha$ называется $\b$, если он коллинеарен $\a$
+(причем если $\a \upuparrows \b: \ \alpha > 0$, иначе $\alpha < 0$ ) и его 
+длина равна $|\alpha| |\a|$ 
 
 \subsection{Дать определения коллинеарных и компланарных векторов.}
 
@@ -151,7 +151,7 @@
     \mcol{Векторы $\vec{a_1},...,\vec{a_n}$ назваются линейно}\\
     Зависимыми & Независимыми\\
     Если существует & Если не существует\\
-    \mcol{Их нетривиальная линейная комбинация, равная $\vec{0}$, т.е.}\\
+    \mcol{Их нетривиальная линейная комбинация, равная $\nul$, т.е.}\\
     \mcol{Если при $\alpha_1,...,\alpha_n \in \mathbb{R}, \ \alpha_1 \vec{a_1} +...+ \alpha_n \vec{a_n} = 0$ }\\
     $\exists \alpha_1,...,\alpha_n$ отличные от нуля & $\nexists \alpha_1,...,\alpha_n$ отличные от нуля \\
 \end{tabular}
@@ -197,55 +197,55 @@
 
 \subsection{Дать определение ортогональной скалярной проекции вектора на направление.}
 
-Ортогональной проекцией вектора $\vec{a}$ на вектор $\vec{b}$ называется число, вычисленное по правилу:
+Ортогональной проекцией вектора $\a$ на вектор $\b$ называется число, вычисленное по правилу:
 \begin{enumerate}
-    \item Отложим вектор $\vec{a}$ от любой точки $A$, получим $\bvec{AB}$
-    \item Возьмем любую ось $b$, направление которой совпадает с $\vec{b}$
+    \item Отложим вектор $\a$ от любой точки $A$, получим $\bvec{AB}$
+    \item Возьмем любую ось $b$, направление которой совпадает с $\b$
     \item Спроецируем $\bvec{AB}$ на $b$ и получим  $\bvec{A_{np}B_{np}}$
-    \item Найдем число $\pm |\bvec{A_{np}B_{np}}|$, где $+$ если $\bvec{A_{np}B_{np}} \upuparrows \vec{b}$, иначе $-$
+    \item Найдем число $\pm |\bvec{A_{np}B_{np}}|$, где $+$ если $\bvec{A_{np}B_{np}} \upuparrows \b$, иначе $-$
 \end{enumerate}
-Обозначение $np_{\vec{b}} \vec{a}$
+Обозначение $np_{\b} \a$
 
 \subsection{Дать определение скалярного произведения векторов.}
 
-Скалярным произведением 2 векторов $\vec{a}$ и $\vec{b}$ называется число, равное произведению длин
+Скалярным произведением 2 векторов $\a$ и $\b$ называется число, равное произведению длин
 векторов на косинус угла между ними.
 
 \subsection{Сформулировать свойство линейности скалярного произведения.}
 
 \begin{center}
-$\forall \vec{a}, \vec{b} \forall k \in \mathbb{R}$
+$\forall \a, \b \forall k \in \mathbb{R}$
 
-$(k\vec{a})\vec{b} = k(\vec{a}\vec{b})$
+$(k\a)\b = k(\a\b)$
 
-$\vec{a}(k\vec{b}) = k(\vec{a}\vec{b})$\\
+$\a(k\b) = k(\a\b)$\\
 
-$\forall \vec{a}, \vec{b}, \vec{c}$
+$\forall \a, \b, \c$
 
-$(\vec{a} + \vec{b})\vec{c} = \vec{a}\vec{c} + \vec{b}\vec{c}$
+$(\a + \b)\c = \a\c + \b\c$
 
-$\vec{a}(\vec{b} + \vec{c}) = \vec{a}\vec{b} + \vec{a}\vec{c}$
+$\a(\b + \c) = \a\b + \a\c$
 \end{center}
 
 \subsection{Записать формулу для вычисления скалярного произведения двух векторов, заданных в ортонормированном базисе.}
 
-$$\vec{a}\vec{b} = \vec{a}_1\vec{b}_1 + \vec{a}_2\vec{b}_2 + \vec{a}_3\vec{b}_3,
-\vec{a}\{a_1;a_2;a_3\},\vec{b}\{b_1;b_2;b_3\} $$
+$$\a\b = \a_1\b_1 + \a_2\b_2 + \a_3\b_3,
+\a\{a_1;a_2;a_3\},\b\{b_1;b_2;b_3\} $$
 
 \subsection{Записать формулу для вычисления косинуса угла между векторами, заданными в ортонормированном базисе.}
 
-$$cos(\vec{a},\vec{b}) = \frac{ \vec{a} \vec{b} }{ |\vec{a}| |\vec{b}| } = 
-\frac{\vec{a}_1\vec{b}_1 + \vec{a}_2\vec{b}_2 + \vec{a}_3\vec{b}_3}
-{\sqrt{\vec{a}_1 + \vec{a}_2 + \vec{a}_3}\sqrt{\vec{b}_1+\vec{b}_2+\vec{b}_3}}$$
+$$cos(\a,\b) = \frac{ \a \b }{ |\a| |\b| } = 
+\frac{\a_1\b_1 + \a_2\b_2 + \a_3\b_3}
+{\sqrt{\a_1 + \a_2 + \a_3}\sqrt{\b_1+\b_2+\b_3}}$$
 
 \subsection{Дать определение правой и левой тройки векторов.}
 
 \begin{center}
 \begin{tabular}{c c} 
 
-    \mcol{Упорядоченная тройка некомплонарных векторов $\vec{a}, \vec{b}, \vec{с}$ называется }\\
+    \mcol{Упорядоченная тройка некомплонарных векторов $\a, \b, \vec{с}$ называется }\\
     Правой & Левой \\
-    \mcol{Если кратчайший поворот от $\vec{a}$ к $\vec{b}$ виден из конца $\vec{c}$ проходящей}\\
+    \mcol{Если кратчайший поворот от $\a$ к $\b$ виден из конца $\c$ проходящей}\\
     Против часовой стрелке & По часовой стрелке\\
 
 \end{tabular}
@@ -253,173 +253,224 @@ $$cos(\vec{a},\vec{b}) = \frac{ \vec{a} \vec{b} }{ |\vec{a}| |\vec{b}| } =
 
 \subsection{Дать определение векторного произведения векторов.}
 
-Векторным произведением 2 векторов $\vec{a}$, $\vec{b}$ называется вектор $\vec{c}$, удовлетворяющих условиям
+Векторным произведением 2 векторов $\a$, $\b$ называется вектор $\c$, удовлетворяющих условиям
 \begin{enumerate}
-    \item $\vec{c} \perp \vec{a}, \vec{c} \perp \vec{b}$
-    \item Упорядоченная тройка $\vec{a}$, $\vec{b}$, $\vec{c}$ правая
-    \item $|\vec{c}| = |\vec{a}||\vec{b}|sin(\vec{a}, \vec{b})$
+    \item $\c \perp \a, \c \perp \b$
+    \item Упорядоченная тройка $\a$, $\b$, $\c$ правая
+    \item $|\c| = |\a||\b|sin(\a, \b)$
 \end{enumerate}
 
 \subsection{Сформулировать свойство коммутативности (симметричности) скалярного произведения 
 и свойство антикоммутативности (антисимметричности) векторного произведения.}
 
 \begin{center}
-$\forall \vec{a}, \vec{b}$
+$\forall \a, \b$
 
-$\vec{a}\vec{b} = \vec{b}\vec{a}$ - симметричность скалярного произведения
+$\a\b = \b\a$ - симметричность скалярного произведения
 
-$\vec{a} \times \vec{b} = - \vec{b} \times \vec{a}$ - кососимметричность векторного произведения
+$\a \times \b = - \b \times \a$ - кососимметричность векторного произведения
 \end{center}
 
 \subsection{Сформулировать свойство линейности векторного произведения векторов.}
 
 \begin{center}
-    $\forall \vec{a}, \vec{b} \forall k \in \mathbb{R}$
+    $\forall \a, \b \forall k \in \mathbb{R}$
     
-    $(k\vec{a}) \times \vec{b} = k(\vec{a} \times \vec{b})$
+    $(k\a) \times \b = k(\a \times \b)$
     
-    $\vec{a} \times (k\vec{b}) = k(\vec{a} \times \vec{b})$\\
+    $\a \times (k\b) = k(\a \times \b)$\\
     
-    $\forall \vec{a}, \vec{b}, \vec{c}$
+    $\forall \a, \b, \c$
     
-    $(\vec{a} + \vec{b}) \times \vec{c} = \vec{a} \times \vec{c} + \vec{b} \times \vec{c}$
+    $(\a + \b) \times \c = \a \times \c + \b \times \c$
     
-    $\vec{a} \times (\vec{b} + \vec{c}) = \vec{a} \times \vec{b} + \vec{a} \times \vec{c}$
+    $\a \times (\b + \c) = \a \times \b + \a \times \c$
 \end{center}
 
 \subsection{Записать формулу для вычисления векторного произведения в правом ортонормированном базисе.}
 
 \begin{center}
-$\vec{a} \times \vec{b} = 
+$\a \times \b = 
 \begin{vmatrix}
-    \vec{i}&\vec{j}&\vec{k}\\
+    \i&\j&\k\\
     a_1 & a_2 & a_3\\
     b_1 & b_2 & b_3
-\end{vmatrix} = \vec{i}
+\end{vmatrix} = \i
 \begin{vmatrix}
     a_2 & a_3\\
     b_2 & b_3
-\end{vmatrix} - \vec{j}
+\end{vmatrix} - \j
 \begin{vmatrix}
     a_1 & a_3\\
     b_1 & b_3
-\end{vmatrix} + \vec{k}
+\end{vmatrix} + \k
 \begin{vmatrix}
     a_1 & a_2\\
     b_1 & b_2
-\end{vmatrix}, \vec{a}\{a_1;a_2;a_3\},\vec{b}\{b_1;b_2;b_3\}$
+\end{vmatrix}, \a\{a_1;a_2;a_3\},\b\{b_1;b_2;b_3\}$
 \end{center}
 
 \subsection{Дать определение смешанного произведения векторов.}
 
-Смешанным произведением 3 векторов $\vec{a}, \vec{b}, \vec{c}$ называется число, равное 
-$(\vec{a} \times \vec{b}) \vec{c}$
+Смешанным произведением 3 векторов $\a, \b, \c$ называется число, равное 
+$(\a \times \b) \c$
 
-Обозначение $(\vec{a}, \vec{b}, \vec{c})$, $\vec{a} \vec{b} \vec{c}$
+Обозначение $(\a, \b, \c)$, $\a \b \c$
 
 \subsection{Сформулировать свойство перестановки (кососимметричности) смешанного произведения.}
 
 При перестановке любых двух векторов, смешанное произведение меняет знак.
 
-$\forall \vec{a}, \vec{b}, \vec{c}:\vec{a} \vec{b} \vec{c} = - 
-\vec{b} \vec{a} \vec{c} = - \vec{c} \vec{b} \vec{a}$
+$\forall \a, \b, \c:\a \b \c = - 
+\b \a \c = - \c \b \a$
 
 \subsection{Сформулировать свойство линейности смешанного произведения.}
 
 \begin{center}
-$\forall \vec{a}, \vec{b}, \vec{c}, \forall k \in \mathbb{R}$
+$\forall \a, \b, \c, \forall k \in \mathbb{R}$
 
-$(k\vec{a})\vec{b}\vec{c} = k(\vec{a}\vec{b}\vec{c})$
+$(k\a)\b\c = k(\a\b\c)$
 
-$\vec{a}(k\vec{b})\vec{c} = k(\vec{a}\vec{b}\vec{c})$
+$\a(k\b)\c = k(\a\b\c)$
 
-$\vec{a}\vec{b}(k\vec{c}) = k(\vec{a}\vec{b}\vec{c})$\\
+$\a\b(k\c) = k(\a\b\c)$\\
 
-$\forall \vec{a}, \vec{b}, \vec{c}, \vec{d}$
+$\forall \a, \b, \c, \d$
 
-$(\vec{a}+\vec{d})\vec{b}\vec{c} = \vec{a}\vec{b}\vec{c} + \vec{d}\vec{b}\vec{c}$
+$(\a+\d)\b\c = \a\b\c + \d\b\c$
 
-$\vec{a}(\vec{b}+\vec{d})\vec{c} = \vec{a}\vec{b}\vec{c} + \vec{a}\vec{d}\vec{c}$
+$\a(\b+\d)\c = \a\b\c + \a\d\c$
 
-$\vec{a}\vec{b}(\vec{c}+\vec{d}) = \vec{a}\vec{b}\vec{c} + \vec{a}\vec{b}\vec{d}$
+$\a\b(\c+\d) = \a\b\c + \a\b\d$
 \end{center}
 
 \subsection{Записать формулу для вычисления смешанного произведения в правом ортонормированном базисе.}
 
-$$\vec{a}\vec{b}\vec{c} = 
+$$\a\b\c = 
 \begin{vmatrix}
     a_1 & a_2 & a_3\\
     b_1 & b_2 & b_3\\
     c_1 & c_2 & c_3
-\end{vmatrix} \ \vec{a}\{a_1;a_2;a_3\},
-\vec{b}\{b_1;b_2;b_3\}, \vec{c}\{c_1;c_2;c_3\}$$
+\end{vmatrix} \ \a\{a_1;a_2;a_3\},
+\b\{b_1;b_2;b_3\}, \c\{c_1;c_2;c_3\}$$
 
 \subsection{Записать общее уравнение плоскости и уравнение «в отрезках». Объяснить 
 геометрический смысл входящих в эти уравнения параметров.}
 
+$$Ax + By + Cz + D = 0$$где $A, B, C$ - координаты вектора нормали плоскости $\vec{n}\{A, B, C\}$
+$$\frac{x}{a}+\frac{y}{b}+\frac{z}{c} = 1$$a, b, c–соответствующие координаты точек 
+лежащих на осях OX, OY и OZ соответственно.
+
+\image{4.png}{200}
 
 
 \subsection{Записать уравнение плоскости, проходящей через 3 данные точки.}
+Пусть извесны 3 точки $M_1(x_1,y_1,z_1),M_2(x_2,y_2,z_2),M_3(x_3,y_3,z_3)$
+Тогда уравнение плоскости, которую они образуют будет равно 
 
 
+$$
+ \begin{cases}
+   x = x_1+(x_2-x_1)u+(x_3-x_1)v\\
+   y = y_1+(y_2-y_1)u+(y_3-y_1)v\\
+   z = z_1+(z_2-z_1)u+(z_3-z_1)v\\
+ \end{cases}
+ u,v \in \mathbb{R}
+$$
 
 \subsection{Записать условия параллельности и перпендикулярности плоскостей.}
 
+Пусть $\begin{cases}\pi_1: A_1x+B_1y+C_1z+D_1 = 0\\\pi_2: A_2x+B_2y+C_2z+D_2 = 0\end{cases}$
+плоскости в пространстве, заданные в аффинной системе координат. Тогда 
+\begin{enumerate}
+    % \item $\pi_1 \equiv \pi_2 \iff \frac{A_1}{A_2} = \frac{B_1}{B_2} = \frac{C_1}{C_2} = \frac{D_1}{D_2}$
+    \item $\pi_1 \parallel \pi_2 \iff \frac{A_1}{A_2} = \frac{B_1}{B_2} = \frac{C_1}{C_2} \ne \frac{D_1}{D_2}$
+    % \item $\pi_1 \cap \pi_2 \iff \frac{A_1}{A_2} \ne \frac{B_1}{B_2}$ или $\frac{A_1}{A_2} \ne \frac{C_1}{C_2}$ или
+    % $\frac{B_1}{B_2} \ne \frac{C_1}{C_2}$
+    \item (Если система координат прямоугольная) $\pi_1 \perp \pi_2 \iff A_1A_2 + B_1B_2 + C_1C_2 = 0$
+\end{enumerate} 
 
 
 \subsection{Записать формулу для расстояния от точки до плоскости, заданной общим уравнением. }
 
-
+$$\begin{cases}\pi: Ax+By+Cz+D = 0\\M_0(x_0,y_0,z_0)\end{cases}: \rho(M_0,\pi) = 
+\frac{ |Ax_0+By_0+Cz_0+D| }{\sqrt{A^2+B^2+C^2}}$$
 
 \subsection{Записать канонические и параметрические уравнения прямой в пространстве. 
 Объяснить геометрический смысл входящих в эти уравнения параметров.}
 
+Канонические 
+$$ \frac{x-x_0}{a} = \frac{y-y_0}{b} = \frac{z-z_0}{c}$$
 
+Параметрические
+$$\begin{cases}x = x_0 + at\\y = y_0 + bt\\z = z_0 + ct\\\end{cases} t \in \mathbb{R}$$
+
+Где $\vec{m}\{a,b,c\}$ направляющий вектор прямой, $M_0(x_0,y_0,z_0)$, точка
+от которой отложен вектор $\vec{m}$
+
+\image{5.png}{200}
 
 \subsection{Записать уравнение прямой, проходящей через две данные точки в пространстве. }
 
-
+$$\begin{cases}M_1(x_1,y_1,z_1)\\M_2(x_2,y_2,z_2)\end{cases}: 
+\frac{x-x_1}{x_2-x_1} = \frac{y-y_1}{y_2-y_1} = \frac{z-z_1}{z_2-z_1}$$
 
 \subsection{Записать условие принадлежности двух прямых одной плоскости.}
 
-
+$l_1$(задан точкой $M_1$ и направляющим вектором $\vec{m}_1$) и $l_2$(Задан точкой $M_2$ и направляющим 
+вектором$\vec{m}_2$) лежат в одной плоскости $\iff \bvec{M_1M_2}\vec{m_1}\vec{m_2} = 0$
+Т.е. $\bvec{M_1M_2}, \vec{m}_1, \vec{m}_2$ комплонарны. 
 
 \subsection{Записать формулу для расстояния от точки до прямой в пространстве.}
 
-
+Пусть $l_1$(задан точкой $M_1(x_1, y_1, z_1)$ и направляющим вектором $\vec{m}_1\{a,b,c\}$) и точка 
+$M_0(x_0,y_0,z_0)$ тогда 
+$$\rho(M_0, l_1) = \frac{ |\bvec{M_1M_0}\times\vec{m}| }{ |\vec{m}| } = 
+\frac{\sqrt{\begin{vmatrix}y_0-y_1&z_0-z_1\\b&c\end{vmatrix}^2+
+\begin{vmatrix}x_0-x_1&z_0-z_1\\a&c\end{vmatrix}^2+
+\begin{vmatrix}x_0-x_1&y_0-y_1\\a&b\end{vmatrix}^2}}{\sqrt{a^2+b^2+c^2}}$$
 
 \subsection{Записать формулу для расстояния между скрещивающимися прямыми.}
+
+Пусть $l_1$(задан точкой $M_1(x_1, y_1, z_1)$ и направляющим вектором $\vec{m}_1\{a_1,b_1,c_1\}$) и 
+$l_2$(Задан точкой $M_2(x_2, y_2, z_2)$ и направляющим вектором$\vec{m}_2\{a_2,b_2,c_2\}$)
+
+$$\rho(l_1, l_2) = \frac{ |\bvec{M_1M_2}\vec{m_1}\vec{m_2}| }{ |\vec{m_1}\times\vec{m_2}| }=
+\frac{ |\begin{vmatrix}x_2-x_1&y_2-y_1&z_2-z_1\\a_1&b_1&c_1\\a_2&b_2&c_2\end{vmatrix}| }
+    {\sqrt{\begin{vmatrix}b_1&c_1\\b_2&c_2\end{vmatrix}^2+
+    \begin{vmatrix}a_1&c_1\\a_2&c_2\end{vmatrix}^2+
+    \begin{vmatrix}a_1&b_1\\a_2&b_2\end{vmatrix}^2}}$$
 
 \section{Теоретические вопросы повышенной сложности}
 
 \subsection{Доказать геометрический критерий линейной зависимости трёх векторов.}
 
-3 вектора линейно зависимы $iff$ они комплонарны
+3 вектора линейно зависимы $\iff$ они комплонарны
 
 \subsubsection{Необходимость}
 
-Пусть $\vec{a}, \vec{b}, \vec{c}$ линейно зависимы, тогда один их них является линейной комбинацией
-остальных. К примеру $\vec{a} = \beta\vec{b} + \gamma\vec{c} (\beta,\gamma \in \mathbb{R})$
-Приложим $\vec{a}, \vec{b}, \vec{c}$ к одной точке $O$, получим $\bvec{OA}, \bvec{OB}, \bvec{OC}:$
+Пусть $\a, \b, \c$ линейно зависимы, тогда один их них является линейной комбинацией
+остальных. К примеру $\a = \beta\b + \gamma\c (\beta,\gamma \in \mathbb{R})$
+Приложим $\a, \b, \c$ к одной точке $O$, получим $\bvec{OA}, \bvec{OB}, \bvec{OC}:$
 $\bvec{OA} = \beta\bvec{OB} + \gamma\bvec{OC}$. Тогда $\bvec{OA}$ диагонать парралелограмма.
 Следовательно $\bvec{OA}, \bvec{OB}, \bvec{OC}$ лежат в одной плоскости, значит они комплонарны,
-тогда и векторы $\vec{a}, \vec{b}, \vec{c}$ тоже комплонарны.
+тогда и векторы $\a, \b, \c$ тоже комплонарны.
 \image{3.png}{200}
 
 \subsubsection{Достаточность}
 
-Пусть $\vec{a}, \vec{b}, \vec{c}$ комплонарны. Рассмотрим 2 случая:
+Пусть $\a, \b, \c$ комплонарны. Рассмотрим 2 случая:
 
-1. Хотя бы один нулевой $(\vec{a} = \vec{0})$. Тогда $\vec{a} = \vec{0}\vec{b} + \vec{0}\vec{c}$
-т.е. $\vec{a}$ является линейной комбинацией $\vec{b}, \vec{c}$ тогда по основной теореме
-$\vec{a}, \vec{b}, \vec{c}$ линейно зависимы. 
+1. Хотя бы один нулевой $(\a = \nul)$. Тогда $\a = \nul\b + \nul\c$
+т.е. $\a$ является линейной комбинацией $\b, \c$ тогда по основной теореме
+$\a, \b, \c$ линейно зависимы. 
 
-2. Ни один не нулевой. Приложим $\vec{a}, \vec{b}, \vec{c}$ к одной точке $O$, 
+2. Ни один не нулевой. Приложим $\a, \b, \c$ к одной точке $O$, 
 получим $\bvec{OA}, \bvec{OB}, \bvec{OC}$, которые лежат в одной плоскости.
 \image{3.png}{200}
 $\bvec{OA} = \bvec{OB_1} + \bvec{OC_1}$. Т.к. $\bvec{OB}, \bvec{OB_1}$ коллинеарны, то
 $\bvec{OB_1} = \beta\bvec{OB}$, аналогично $\bvec{OC_1} = \beta\bvec{OC}$ 
-$\vec{a} = \beta\vec{b} + \gamma\vec{c}$, тогда $\vec{a}, \vec{b}, \vec{c}$ линейно зависимы.
+$\a = \beta\b + \gamma\c$, тогда $\a, \b, \c$ линейно зависимы.
 
 \subsection{Доказать теорему о разложении вектора по базису.}
 
@@ -436,7 +487,7 @@ $\vec{a} = \beta\vec{b} + \gamma\vec{c}$, тогда $\vec{a}, \vec{b}, \vec{c}$
 
 Из геометрических критериев следует, что 4 вектора $\vec{x}, \vec{e_1}, \vec{e_2}, \vec{e_3}$.
 Тогда $\exists \alpha_0, \alpha_1, \alpha_2, \alpha_3$ (не все равны нулю), что
-$\alpha_0\vec{x} + \alpha_1\vec{e_1} + \alpha_2\vec{e_2} + \alpha_3\vec{e_3} = \vec{0} (1)$.
+$\alpha_0\vec{x} + \alpha_1\vec{e_1} + \alpha_2\vec{e_2} + \alpha_3\vec{e_3} = \nul (1)$.
 Тогда по определению линейно зависимых $\vec{e_1}, \vec{e_2}, \vec{e_3}$ линейно зависимы,
 т.е. комплонарны. $\vec{e_1}, \vec{e_2}, \vec{e_3}$ - базис в $V_3$ $\alpha_0 \ne 0$.
 Умножим (1) на $\frac{1}{\alpha_0}$ и выразим $\vec{x}$. 
@@ -449,42 +500,42 @@ $\vec{x} = x_1\vec{e_1} + x_2\vec{e_2} + x_3\vec{e_3}$
 От противного. Пусть существуют 2 разложения для 
 $\vec{x}: \vec{x} = x_1\vec{e_1} + x_2\vec{e_2} + x_3\vec{e_3};$
 $\vec{x} = y_1\vec{e_1} + y_2\vec{e_2} + y_3\vec{e_3}$
-Рассмотрим разность $\vec{0} = \vec{x} - \vec{x} = 
+Рассмотрим разность $\nul = \vec{x} - \vec{x} = 
 (x_1 - y_1)\vec{e_1} + (x_2 - y_2)\vec{e_2} + (x_3 - y_3)\vec{e_3}$ - линейная комбинация 
 $\vec{e_1}, \vec{e_2}, \vec{e_3}$. Т.к. $\vec{e_1}, \vec{e_2}, \vec{e_3}$ не комплонарны
-тогда их линейная комбинация равна $\vec{0}$, $x_1 - y_1 = 0$ $x_2 - y_2 = 0$ $x_3 - y_3 = 0$
+тогда их линейная комбинация равна $\nul$, $x_1 - y_1 = 0$ $x_2 - y_2 = 0$ $x_3 - y_3 = 0$
 Получили $x_1 = y_1$ $x_2 = y_2$ $x_3 = y_3$ разложение единственно.
 
 \subsection{Доказать свойство линейности скалярного произведения.}
 
 \begin{center}
-    $\forall \vec{a}, \vec{b}, \vec{c} \forall k \in \mathbb{R}$
+    $\forall \a, \b, \c \forall k \in \mathbb{R}$
 \end{center}
 
-\subsubsection{$(k\vec{a})\vec{b} = k(\vec{a}\vec{b})$}
+\subsubsection{$(k\a)\b = k(\a\b)$}
 
-1. $\vec{b} = \vec{0}$ левая часть $ = (k\vec{a})\vec{0} = \vec{0}$, правая часть $ = k(\vec{a}\vec{0}) = \vec{0}$
+1. $\b = \nul$ левая часть $ = (k\a)\nul = \nul$, правая часть $ = k(\a\nul) = \nul$
 
-2. $\vec{b} \ne \vec{0}$ левая часть $ = (k\vec{a})\vec{b} = \vec{b}(k\vec{a}) = |\vec{b}|np_{\vec{b}}(k\vec{a}) =
-k|\vec{b}|np_{\vec{b}}(\vec{a}) = k(\vec{b}\vec{a}) = k(\vec{a}\vec{b}) = $ правая часть
+2. $\b \ne \nul$ левая часть $ = (k\a)\b = \b(k\a) = |\b|np_{\b}(k\a) =
+k|\b|np_{\b}(\a) = k(\b\a) = k(\a\b) = $ правая часть
 
-\subsubsection{$\vec{a}(k\vec{b}) = k(\vec{a}\vec{b})$}
+\subsubsection{$\a(k\b) = k(\a\b)$}
 
-Левая часть $ = \vec{a}(k\vec{b}) = (k\vec{b})\vec{a} = k(\vec{a}\vec{b}) = $ правая часть
+Левая часть $ = \a(k\b) = (k\b)\a = k(\a\b) = $ правая часть
 
-\subsubsection{$(\vec{a} + \vec{b})\vec{c} = \vec{a}\vec{c} + \vec{b}\vec{c}$}
+\subsubsection{$(\a + \b)\c = \a\c + \b\c$}
 
-1. $\vec{c} = \vec{0}$ левая часть $ = (\vec{a} + \vec{b})\vec{c} = \vec{0}$, 
-правая часть $ = \vec{a}\vec{0} + \vec{b}\vec{0} = \vec{0}$
+1. $\c = \nul$ левая часть $ = (\a + \b)\c = \nul$, 
+правая часть $ = \a\nul + \b\nul = \nul$
 
-2. $\vec{c} \ne \vec{0}$ левая часть $ = \vec{c}(\vec{a} + \vec{b}) = |\vec{c}|np_{\vec{c}}(\vec{a} + \vec{b}) =
-|\vec{c}|(np_{\vec{c}}\vec{a} + np_{\vec{c}}\vec{b}) = \vec{c}\vec{a} + \vec{c}\vec{b} = 
-\vec{a}\vec{c} + \vec{b}\vec{c} = $ правая часть
+2. $\c \ne \nul$ левая часть $ = \c(\a + \b) = |\c|np_{\c}(\a + \b) =
+|\c|(np_{\c}\a + np_{\c}\b) = \c\a + \c\b = 
+\a\c + \b\c = $ правая часть
 
-\subsubsection{$\vec{a}(\vec{b} + \vec{c}) = \vec{a}\vec{b} + \vec{a}\vec{c}$}
+\subsubsection{$\a(\b + \c) = \a\b + \a\c$}
 
-Левая часть $ = \vec{a}(\vec{b} + \vec{c}) = (\vec{b} + \vec{c})\vec{a} = 
-\vec{a}\vec{b} + \vec{a}\vec{c} = $ правая часть
+Левая часть $ = \a(\b + \c) = (\b + \c)\a = 
+\a\b + \a\c = $ правая часть
 
 \subsection{Вывести формулу для вычисления скалярного произведения векторов, заданных в ортонормированном базисе.}
 
@@ -497,24 +548,24 @@ a_3b_1(\k\i) + a_3b_2(\k\j) + a_3b_3(\k\k) = |\i\i=1,\i\j=0,\i\k=0,\j\j=1,\j\k=0
 \subsection{Вывести формулу для вычисления векторного произведения в правом ортонормированном базисе.}
 
 \begin{center}
-$\vec{a} \times \vec{b} = 
+$\a \times \b = 
 \begin{vmatrix}
-    \vec{i}&\vec{j}&\vec{k}\\
+    \i&\j&\k\\
     a_1 & a_2 & a_3\\
     b_1 & b_2 & b_3
-\end{vmatrix} = \vec{i}
+\end{vmatrix} = \i
 \begin{vmatrix}
     a_2 & a_3\\
     b_2 & b_3
-\end{vmatrix} - \vec{j}
+\end{vmatrix} - \j
 \begin{vmatrix}
     a_1 & a_3\\
     b_1 & b_3
-\end{vmatrix} + \vec{k}
+\end{vmatrix} + \k
 \begin{vmatrix}
     a_1 & a_2\\
     b_1 & b_2
-\end{vmatrix}, \vec{a}\{a_1;a_2;a_3\},\vec{b}\{b_1;b_2;b_3\}$
+\end{vmatrix}, \a\{a_1;a_2;a_3\},\b\{b_1;b_2;b_3\}$
 \end{center}
 
 $$\a \times \b = (a_1\i + a_2\j + a_3\k)\times(b_1\i + b_2\j + b_3\k)  = 
@@ -522,21 +573,21 @@ a_1b_1(\i\times\i) + a_1b_2(\i\times\j) + a_1b_3(\i\times\k) + a_2b_1(\j\times\i
 a_2b_2(\j\times\j) +a_2b_3(\j\times\k)+a_3b_1(\k\times\i) + a_3b_2(\k\times\j) + 
 a_3b_3(\k\times\k) = |\i\times\i = \nul, \i\times\j = \k, \i\times\k = -\j, \j\times\i = -\k, 
 \j\times\j = \nul, \j\times\k = \i, \k\times\i = \j, \k\times\j = -\i,\k\times\k = \nul|=
-\i(\a_2\b_3+\a_3\b_2) + \j(\a_1\b_3+\a_3\b_1) + \k(\a_1\b_2+\a_2\b_1) = \vec{i}
+\i(\a_2\b_3+\a_3\b_2) + \j(\a_1\b_3+\a_3\b_1) + \k(\a_1\b_2+\a_2\b_1) = \i
 \begin{vmatrix}
     a_2 & a_3\\
     b_2 & b_3
-\end{vmatrix} - \vec{j}
+\end{vmatrix} - \j
 \begin{vmatrix}
     a_1 & a_3\\
     b_1 & b_3
-\end{vmatrix} + \vec{k}
+\end{vmatrix} + \k
 \begin{vmatrix}
     a_1 & a_2\\
     b_1 & b_2
 \end{vmatrix}  = 
 \begin{vmatrix}
-    \vec{i}&\vec{j}&\vec{k}\\
+    \i&\j&\k\\
     a_1 & a_2 & a_3\\
     b_1 & b_2 & b_3
 \end{vmatrix}$$
@@ -544,38 +595,38 @@ a_3b_3(\k\times\k) = |\i\times\i = \nul, \i\times\j = \k, \i\times\k = -\j, \j\t
 \subsection{Доказать свойство линейности смешанного произведения.}
 
 \begin{center}
-    $\forall \vec{a}, \vec{b}, \vec{c},\vec{d} \forall k \in \mathbb{R}$
+    $\forall \a, \b, \c,\d \forall k \in \mathbb{R}$
 \end{center}
 
-\subsubsection{$(k\vec{a})\vec{b}\vec{c} = k(\vec{a}\vec{b}\vec{c})$}
-$$(k\a)\b\c = ((k\a)\times\b)\c = (k(\a\times\b))\c = k((\a\times\b)\c) = k(\vec{a}\vec{b}\vec{c})$$
+\subsubsection{$(k\a)\b\c = k(\a\b\c)$}
+$$(k\a)\b\c = ((k\a)\times\b)\c = (k(\a\times\b))\c = k((\a\times\b)\c) = k(\a\b\c)$$
 
-\subsubsection{$\vec{a}(k\vec{b})\vec{c} = k(\vec{a}\vec{b}\vec{c})$}
+\subsubsection{$\a(k\b)\c = k(\a\b\c)$}
 $$\a(k\b)\c = (k\b)\c\a = k(\b\c\a) = k(\a\b\c)$$
 
-\subsubsection{$\vec{a}\vec{b}(k\vec{c}) = k(\vec{a}\vec{b}\vec{c})$}
+\subsubsection{$\a\b(k\c) = k(\a\b\c)$}
 $$\a\b(k\c) = (k\c)\a\b = k(\c\a\b) = k(\a\b\c)$$
 
-\subsubsection{$(\vec{a}+\vec{d})\vec{b}\vec{c} = \vec{a}\vec{b}\vec{c} + \vec{d}\vec{b}\vec{c}$}
+\subsubsection{$(\a+\d)\b\c = \a\b\c + \d\b\c$}
 $$(\a+\d)\b\c = ((\a+\d)\times\b)\c = (\a\times\b+\d\times\b)\c = \a\b\c+\d\b\c$$
 
-\subsubsection{$\vec{a}(\vec{b}+\vec{d})\vec{c} = \vec{a}\vec{b}\vec{c} + \vec{a}\vec{d}\vec{c}$}
+\subsubsection{$\a(\b+\d)\c = \a\b\c + \a\d\c$}
 $$\a(\b+\d)\c = (\b+\d)\c\a = \b\c\a + \d\c\a = \a\b\c + \a\d\c$$
 
-\subsubsection{$\vec{a}\vec{b}(\vec{c}+\vec{d}) = \vec{a}\vec{b}\vec{c} + \vec{a}\vec{b}\vec{d}$}
+\subsubsection{$\a\b(\c+\d) = \a\b\c + \a\b\d$}
 $$\a\b(\c+\d) = (\c+\d)\a\b = \c\a\b+\d\a\b = \a\b\c + \a\b\d$$
 
 \subsection{Вывести формулу для вычисления смешанного произведения трёх векторов в правом ортонормированном базисе.}
 
-$$\a\b\c = (\a\times\b)\c = (\vec{i}
+$$\a\b\c = (\a\times\b)\c = (\i
 \begin{vmatrix}
     a_2 & a_3\\
     b_2 & b_3
-\end{vmatrix} - \vec{j}
+\end{vmatrix} - \j
 \begin{vmatrix}
     a_1 & a_3\\
     b_1 & b_3
-\end{vmatrix} + \vec{k}
+\end{vmatrix} + \k
 \begin{vmatrix}
     a_1 & a_2\\
     b_1 & b_2
