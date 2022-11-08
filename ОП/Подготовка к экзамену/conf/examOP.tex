@@ -1,0 +1,255 @@
+\documentclass[a4paper, 10pt]{article}
+\usepackage[T2A]{fontenc}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage[russian]{babel}
+\usepackage{amsfonts,amsmath,amssymb}
+\usepackage{mathrsfs}
+\usepackage{graphicx}
+\usepackage[normalem]{ulem}
+\usepackage{wrapfig}
+\usepackage{fancyhdr}
+\usepackage{floatflt}
+\usepackage{python}
+\usepackage{float}
+\usepackage{ amssymb }
+\usepackage{indentfirst}
+\usepackage{setspace}
+\usepackage{scrextend}
+\usepackage{listings}
+\usepackage{makecell,tabularx}
+\usepackage{hyperref}
+\usepackage{xcolor}
+
+\newcommand{\rub}{{\rm{Р}\kern-.635em\rule[.5ex]{.52em}{.04em}\kern.11em}}
+
+\definecolor{linkcolor}{HTML}{000000} 
+\definecolor{urlcolor}{HTML}{0000FF} 
+
+\hypersetup{pdfstartview=FitH,  linkcolor=linkcolor,urlcolor=urlcolor, colorlinks=true}
+
+\definecolor{grey}{RGB}{40, 40, 40}
+
+\renewcommand{\href}[1]{\url{#1}}
+
+\lstdefinestyle{CommentStyle}{
+    language=XML,
+    %numbers=left, numberstyle=\tiny, stepnumber=1, numbersep=5pt,
+    commentstyle=\color{red},
+	basicstyle=\footnotesize\ttfamily,
+	language={[ANSI]C++},
+	keywordstyle=\bfseries,
+	showstringspaces=false,
+	morekeywords={include, printf},
+	commentstyle={},
+	escapeinside=§§,
+	escapebegin=\begin{russian}\commentfont,
+	escapeend=\end{russian},
+    keywordstyle=\color{blue}\bfseries,
+    morekeywords={align,begin},
+    extendedchars=\true,
+    tabsize=2
+}
+\lstdefinestyle{myLatexStyle}{
+    language=c++,
+    %backgroundcolor=\color{grey},
+    numbers=left, numberstyle=\tiny, stepnumber=1, numbersep=5pt,
+    commentstyle=\color{red},
+    keywordstyle=\color{blue}\bfseries,
+    morekeywords={align,begin},
+    extendedchars=\true,
+    tabsize=2
+}
+
+\lstdefinestyle{pmyLatexStyle}{
+    language=java,
+    %backgroundcolor=\color{grey},
+    numbers=left, numberstyle=\tiny, stepnumber=1, numbersep=5pt,
+    commentstyle=\color{red},
+    keywordstyle=\color{blue}\bfseries,
+    morekeywords={align,begin},
+    extendedchars=\true,
+    tabsize=2
+}
+
+\setlength{\parindent}{12,5mm}
+
+\newcommand{\bvec}[1]{\overrightarrow{#1}}
+\newcommand{\mcol}[1]{\multicolumn{2}{c}{#1}}
+\newcommand{\mcolt}[1]{&#1&}
+\renewcommand{\a}{\vec{a}}
+\renewcommand{\b}{\vec{b}}
+\renewcommand{\c}{\vec{c}}
+\renewcommand{\d}{\vec{d}}
+\renewcommand{\i}{\vec{i}}
+\renewcommand{\j}{\vec{j}}
+\renewcommand{\k}{\vec{k}}
+\newcommand{\nul}{\vec{0}}
+
+\newcommand{\logo}{\vcenter{\hbox{\includegraphics[width=.8em]{/Users/pluttan/Documents/bw2.png}}}}
+\onehalfspacing
+
+\pagestyle{fancy}
+\renewcommand{\sectionmark}[1]{\markright{#1}}
+\fancyhf{} 
+\fancyhead[R]{\bfseries\thepage}
+\fancyhead[LO]{$\mathfrak{Copyright}\ \mathfrak{pluttan} \logo$}
+
+\newcommand{\image}[2]{
+	\begin{figure}[H]
+		\center{\includegraphics[height=#2pt]{img/#1} }
+    \end{figure}
+}
+% It's XeLaTeX, if you can't compile:
+% 1. download & install this https://isopromat.ru/wp-content/uploads/fonts-GOST.zip
+% 2. try to use XeLaTeX 
+% OR comment this line 
+\usepackage{fontspec}\setmainfont{Times New Roman} 
+
+\begin{document}
+\section{}
+
+\subsection{Синтаксис  и  семантика  языков  программирования.  Алфавит  языка  Pascal.  Описание 
+синтаксиса языка: синтаксические диаграммы. Примеры. }
+
+
+
+\subsection{Представление  данных  в  языке  Pascal:  константы  и  переменные.  Классификация  ска-
+лярных типов данных, их внутреннее представление, операции над ними. Примеры.} 
+
+
+
+\subsection{Совместимость типов данных и операции преобразования типов. Примеры. }
+
+
+
+\subsection{Присваивание, условный оператор, оператор выбора. Синтаксис операторов, их особен-
+ности и примеры использования. }
+
+
+
+\subsection{Операторы циклов языка Pascal. Синтаксис операторов, их особенности и примеры ис-
+пользования. }
+
+
+
+\subsection{Поисковый цикл. Неструктурная и структурная реализации поискового цикла. }
+
+
+
+\subsection{Массивы языка Pascal. Описание, внутреннее представление, операции над массивами и 
+их элементами. Примеры. }
+
+
+
+\subsection{Строки языка Pascal. Описание, внутреннее представление, операции над строками и их 
+элементами. Примеры. }
+
+
+
+\subsection{Множества  языка  Pascal.  Описание,  внутреннее  представление,  операции  над  множе-
+ствами и их элементами. Примеры. }
+
+
+
+\subsection{Записи языка Pascal. Описание, внутреннее представление, операции над записями и их 
+элементами. Примеры. }
+
+
+
+\subsection{Процедуры и функции. Определение, описание, особенности. Примеры. }
+
+
+
+\subsection{Способы передачи данных в подпрограмму на языке Pascal. Примеры. }
+
+
+
+\subsection{Локальные и глобальные переменные, законы «видимости» идентификаторов. Примеры. }
+
+
+
+\subsection{Формальные и фактические параметры подпрограмм языка Pascal. Примеры. }
+
+
+
+\subsection{Параметры-строки, параметры-массивы. Примеры. }
+
+
+
+\subsection{Принципы разработки универсальных подпрограмм: «открытые» массивы. Примеры. }
+
+
+
+\subsection{Принципы разработки универсальных подпрограмм:  нетипизированные параметры, па-
+раметры процедурного типа. Примеры. }
+
+
+
+\subsection{Структура модуля языка Pascal. Законы видимости идентификаторов. Доступ к «пере-
+крытым» идентификаторам. Примеры. }
+
+
+
+\subsection{Рекурсия.  Виды  рекурсии.  Особенности  программирования. Достоинства  и  недостатки. 
+Пример. }
+
+
+
+\subsection{Адресация динамической памяти: понятие адреса, операции получения адреса и разыме-
+нования. Процедуры получения памяти и освобождения ее. Примеры. }
+
+
+
+\subsection{Списковые  структуры  данных.  Классификация  и  основные  приемы  работы  с  ними:  соз-
+дание элемента, добавление элемента к списку, удаление элемента из списка. Область приме-
+нения списковых структур данных. Пример. }
+
+
+
+\subsection{Основы файловой системы: файл, каталог, полное имя файла, внутреннее представление 
+информации в файле. Файловая переменная. Операции открытия и закрытия файлов. Приме-
+ры. }
+
+
+
+\subsection{Текстовые  файлы.  Внутреннее  представление  информации  в  файле.  Операции  над  фай-
+лами. Пример. }
+
+
+
+\subsection{Типизированные  файлы:  внутреннее  представление  информации  в  файле.  Операции  над 
+файлами. Пример. }
+
+
+
+\subsection{Нетипизированные  файлы.  Внутреннее  представление  информации  в  файле.  Операции 
+над файлами. Пример. }
+
+
+
+\subsection{Классы консольного режима среды Lazarus: описание классов, поля и методы, объявление 
+объектов класса, доступ к полям и методам объекта, ограничение доступа. Пример. }
+
+
+
+\subsection{Классы консольного режима  среды  Lazarus: Способы инициализация полей. Неявный па-
+раметр Self. Пример. }
+
+
+
+\subsection{Процедурная и объектная декомпозиция. Диаграммы классов. Отношения между класса-
+ми. Примеры. }
+
+
+
+\subsection{Динамические объекты и объекты с динамическими полями в консольном режиме среды 
+Lazarus. Примеры. }
+
+
+
+\subsection{Технология  событийного  программирования.  События  операционной  системы,  сообще-
+ния и события Lazarus. Основные события Lazarus. Примеры.}
+
+
+
+\end{document}

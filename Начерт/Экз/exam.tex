@@ -1,0 +1,140 @@
+\documentclass[a4paper, 10pt]{article}
+\usepackage[T2A]{fontenc}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage[russian]{babel}
+\usepackage{amsfonts,amsmath,amssymb}
+\usepackage{mathrsfs}
+\usepackage{graphicx}
+\usepackage[normalem]{ulem}
+\usepackage{wrapfig}
+\usepackage{fancyhdr}
+\usepackage{floatflt}
+\usepackage{python}
+\usepackage{float}
+\usepackage{ amssymb }
+\usepackage{indentfirst}
+\usepackage{setspace}
+\usepackage{scrextend}
+\usepackage{listings}
+\usepackage{makecell,tabularx}
+\usepackage{hyperref}
+\usepackage{xcolor}
+
+\newcommand{\rub}{{\rm{Р}\kern-.635em\rule[.5ex]{.52em}{.04em}\kern.11em}}
+
+\definecolor{linkcolor}{HTML}{000000} 
+\definecolor{urlcolor}{HTML}{0000FF} 
+
+\hypersetup{pdfstartview=FitH,  linkcolor=linkcolor,urlcolor=urlcolor, colorlinks=true}
+
+\definecolor{grey}{RGB}{40, 40, 40}
+
+\renewcommand{\href}[1]{\url{#1}}
+
+\lstdefinestyle{CommentStyle}{
+    language=XML,
+    %numbers=left, numberstyle=\tiny, stepnumber=1, numbersep=5pt,
+    commentstyle=\color{red},
+	basicstyle=\footnotesize\ttfamily,
+	language={[ANSI]C++},
+	keywordstyle=\bfseries,
+	showstringspaces=false,
+	morekeywords={include, printf},
+	commentstyle={},
+	escapeinside=§§,
+	escapebegin=\begin{russian}\commentfont,
+	escapeend=\end{russian},
+    keywordstyle=\color{blue}\bfseries,
+    morekeywords={align,begin},
+    extendedchars=\true,
+    tabsize=2
+}
+\lstdefinestyle{myLatexStyle}{
+    language=c++,
+    %backgroundcolor=\color{grey},
+    numbers=left, numberstyle=\tiny, stepnumber=1, numbersep=5pt,
+    commentstyle=\color{red},
+    keywordstyle=\color{blue}\bfseries,
+    morekeywords={align,begin},
+    extendedchars=\true,
+    tabsize=2
+}
+
+\lstdefinestyle{pmyLatexStyle}{
+    language=java,
+    %backgroundcolor=\color{grey},
+    numbers=left, numberstyle=\tiny, stepnumber=1, numbersep=5pt,
+    commentstyle=\color{red},
+    keywordstyle=\color{blue}\bfseries,
+    morekeywords={align,begin},
+    extendedchars=\true,
+    tabsize=2
+}
+
+\setlength{\parindent}{12,5mm}
+
+\newcommand{\bvec}[1]{\overrightarrow{#1}}
+\newcommand{\mcol}[1]{\multicolumn{2}{c}{#1}}
+\newcommand{\mcolt}[1]{&#1&}
+\renewcommand{\a}{\vec{a}}
+\renewcommand{\b}{\vec{b}}
+\renewcommand{\c}{\vec{c}}
+\renewcommand{\d}{\vec{d}}
+\renewcommand{\i}{\vec{i}}
+\renewcommand{\j}{\vec{j}}
+\renewcommand{\k}{\vec{k}}
+\newcommand{\nul}{\vec{0}}
+
+\newcommand{\logo}{\vcenter{\hbox{\includegraphics[width=.8em]{/Users/pluttan/Documents/bw2.png}}}}
+\onehalfspacing
+
+\pagestyle{fancy}
+\renewcommand{\sectionmark}[1]{\markright{#1}}
+\fancyhf{} 
+\fancyhead[R]{\bfseries\thepage}
+\fancyhead[LO]{$\mathfrak{Copyright}\ \mathfrak{pluttan} \logo$}
+
+\newcommand{\image}[2]{
+	\begin{figure}[H]
+		\center{\includegraphics[height=#2pt]{img/#1} }
+    \end{figure}
+}
+% It's XeLaTeX, if you can't compile:
+% 1. download & install this https://isopromat.ru/wp-content/uploads/fonts-GOST.zip
+% 2. try to use XeLaTeX 
+% OR comment this line 
+\usepackage{fontspec}\setmainfont{GOST type B} 
+
+\begin{document}
+\section{Теория}
+\subsection{Свойства прямоугольного проецирования}
+
+Привет! Я текст)
+$y = x$
+
+\subsection{Какие линии называются проецирующими линиями, линиями уровня?}
+\subsection{Какие линии, принадлежащие плоскости, называются горизонталью, фронталью?}
+\subsection{Теорема о проецировании прямого угла}
+\subsection{На основании каких положений строят перпендикулярные: прямую и плоскость?}
+\subsection{На основании каких положений строят параллельные: прямую и плоскость?}
+\subsection{На основании каких положений строят на чертеже две параллельные плоскости?}
+\subsection{На основании каких положений строят на чертеже две перпендикулярные плоскости?}
+\subsection{Правило построения проекции точки, принадлежащей поверхности}
+\subsection{Правило построения проекции точки, принадлежащей плоскости}
+\subsection{Правило построения проекций точки, принадлежащей поверхности вращения}
+\subsection{Способы преобразования}
+\subsection{Условия преобразования способом замены плоскостей проекций}
+\subsection{Условия преобразования способом вращения вокруг проецирующей прямой}
+\subsection{Какая линия поверхности вращения называется меридианом, параллелью?}
+\subsection{В какую линию может проецироваться окружность при разных ее положениях отностельно плоскостей проекций?}
+\subsection{Алгоритм построения точек пересечения линии с поверхностью}
+\subsection{Последовательность построения точки пересечения прямой и плоскости}
+\subsection{Последовательность построения точек пересечения прямой и поверхности}
+\subsection{Какие линиии получаются в сечении цилиндрической поверхности плоскостью при разных положениях плоскости относительно оси цилиндрической поверхности?}
+\subsection{Конические сечения. При каком положении плоскости относительно оси конической поверхности сечением является окружность, эллипс, прямые, парабола, гипербола?}
+\subsection{Последовательность построения линии пересечения двух поверхностей}
+\subsection{Теорема Монжа. Привести пример}
+\subsection{Какую плоскость называют касательной к поверхности в данной точке?}
+\subsection{Что называется нормалью к поверхности в данной точке?}
+
+\end{document}

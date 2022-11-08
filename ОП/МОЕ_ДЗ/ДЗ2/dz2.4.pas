@@ -34,6 +34,6 @@ Begin
   Writeln('Введите b, затем погрешность.');
   read(b);
   readln(e);
-  MASSHTAB(@ctgx);{Поменять на @ ctgx при f(x)=ctg()}
+  MASSHTAB(@sinx2);{Поменять на @ ctgx при f(x)=ctg()}
   writeln(M:10:6);
 End.

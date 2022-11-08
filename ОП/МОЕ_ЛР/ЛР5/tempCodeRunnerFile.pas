@@ -1,38 +1,49 @@
 
-Program LR5;
+Program pr1;
 
-Uses Sysutils;
+Type fun = Function (x:real): double;
 
-Var c: array[0..6,0..9] Of char;
-  i,j,k: integer;
+Function n1_f1(x:real): real;
+far;
 Begin
-  randomize;
-  For i := 0 To 7 Do
-    Begin
-      For j := 0 To 9 Do
-        Begin
-          c[i][j] := chr(65 + random(25));
-          write(c[i][j]);
-        End;
-      writeln();
-    End;
-  writeln();
-  For i := 0 To 9 Do
-    Begin
-      For j := 0 To 7 Do
-        write(c[j][i]);
-      writeln();
-    End;
-  writeln();
-  For i := 0 To 7 Do
-    Begin
-      For j := 0 To 9 Do
-        write(c[i][j]);
-      If i<6 Then
-        Begin
-          writeln();
-          For k := 0 To i Do
-            write(' ');
-        End;
-    End;
+  n1_f1 := 1;
+End;
+
+Function n1_f2(x:real): real;
+Begin
+  n1_f2 := 2;
+End;
+
+Function n1_f3(x:real): real;
+Begin
+  n1_f3 := 3;
+End;
+
+Function n2_f1(x:real): real;
+Begin
+  n2_f1 := 4;
+End;
+
+Function n2_f2(x:real): real;
+Begin
+  n2_f2 := 5;
+End;
+
+Function n2_f3(x:real): real;
+Begin
+  n2_f3 := 6;
+End;
+
+Function z(fx:fun; x:real): real;
+far;
+Begin
+  fx(x);
+End;
+
+Var n1,n2,n3: fun;
+Begin
+  n1 := n1_f1;
+  n2
+  n3 := 
+        writeln(z(n, 20));
 End.
