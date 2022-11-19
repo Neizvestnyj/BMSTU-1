@@ -1,122 +1,88 @@
-\documentclass[a4paper, 10pt]{article}
-\usepackage[T2A]{fontenc}
-\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
-\usepackage[russian]{babel}
-\usepackage{amsfonts,amsmath,amssymb}
-\usepackage{mathrsfs}
-\usepackage{graphicx}
-\usepackage[normalem]{ulem}
-\usepackage{wrapfig}
-\usepackage{fancyhdr}
-\usepackage{floatflt}
-\usepackage{python}
-\usepackage{float}
-\usepackage{ amssymb }
-\usepackage{indentfirst}
-\usepackage{setspace}
-\usepackage{scrextend}
-\usepackage{listings}
-\usepackage{makecell,tabularx}
-\usepackage{hyperref}
-\usepackage{xcolor}
-
-\newcommand{\rub}{{\rm{Р}\kern-.635em\rule[.5ex]{.52em}{.04em}\kern.11em}}
-
-\definecolor{linkcolor}{HTML}{000000} 
-\definecolor{urlcolor}{HTML}{0000FF} 
-
-\hypersetup{pdfstartview=FitH,  linkcolor=linkcolor,urlcolor=urlcolor, colorlinks=true}
-
-\definecolor{grey}{RGB}{40, 40, 40}
-
-\renewcommand{\href}[1]{\url{#1}}
-
-\lstdefinestyle{CommentStyle}{
-    language=XML,
-    %numbers=left, numberstyle=\tiny, stepnumber=1, numbersep=5pt,
-    commentstyle=\color{red},
-	basicstyle=\footnotesize\ttfamily,
-	language={[ANSI]C++},
-	keywordstyle=\bfseries,
-	showstringspaces=false,
-	morekeywords={include, printf},
-	commentstyle={},
-	escapeinside=§§,
-	escapebegin=\begin{russian}\commentfont,
-	escapeend=\end{russian},
-    keywordstyle=\color{blue}\bfseries,
-    morekeywords={align,begin},
-    extendedchars=\true,
-    tabsize=2
-}
-\lstdefinestyle{myLatexStyle}{
-    language=c++,
-    %backgroundcolor=\color{grey},
-    numbers=left, numberstyle=\tiny, stepnumber=1, numbersep=5pt,
-    commentstyle=\color{red},
-    keywordstyle=\color{blue}\bfseries,
-    morekeywords={align,begin},
-    extendedchars=\true,
-    tabsize=2
-}
-
-\lstdefinestyle{pmyLatexStyle}{
-    language=java,
-    %backgroundcolor=\color{grey},
-    numbers=left, numberstyle=\tiny, stepnumber=1, numbersep=5pt,
-    commentstyle=\color{red},
-    keywordstyle=\color{blue}\bfseries,
-    morekeywords={align,begin},
-    extendedchars=\true,
-    tabsize=2
-}
-
-\setlength{\parindent}{12,5mm}
-
-\newcommand{\bvec}[1]{\overrightarrow{#1}}
-\newcommand{\mcol}[1]{\multicolumn{2}{c}{#1}}
-\newcommand{\mcolt}[1]{&#1&}
-\renewcommand{\a}{\vec{a}}
-\renewcommand{\b}{\vec{b}}
-\renewcommand{\c}{\vec{c}}
-\renewcommand{\d}{\vec{d}}
-\renewcommand{\i}{\vec{i}}
-\renewcommand{\j}{\vec{j}}
-\renewcommand{\k}{\vec{k}}
-\newcommand{\nul}{\vec{0}}
-
-\newcommand{\logo}{\vcenter{\hbox{\includegraphics[width=.8em]{/Users/pluttan/Documents/bw2.png}}}}
-\onehalfspacing
-
-\pagestyle{fancy}
-\renewcommand{\sectionmark}[1]{\markright{#1}}
-\fancyhf{} 
-\fancyhead[R]{\bfseries\thepage}
-\fancyhead[LO]{$\mathfrak{Copyright}\ \mathfrak{pluttan} \logo$}
-
-\newcommand{\image}[2]{
-	\begin{figure}[H]
-		\center{\includegraphics[height=#2pt]{img/#1} }
-    \end{figure}
-}
-% It's XeLaTeX, if you can't compile:
-% 1. download & install this https://isopromat.ru/wp-content/uploads/fonts-GOST.zip
-% 2. try to use XeLaTeX 
-% OR comment this line 
-\usepackage{fontspec}\setmainfont{Times New Roman} 
+\include{/Users/pluttan/Documents/forMyDocs/preamb.tex}
 
 \begin{document}
+\dotitle{Подготовка к экзамену}{Основы программирования}{}
 \section{}
 
-\subsection{Синтаксис  и  семантика  языков  программирования.  Алфавит  языка  Pascal.  Описание 
-синтаксиса языка: синтаксические диаграммы. Примеры. }
+\subsection{Синтаксис  и  семантика  языков  программирования.  Алфавит  языка  Pascal.  Описание синтаксиса языка: синтаксические диаграммы. Примеры. }
 
+{\bf{Синтаксис}}
+\begin{itemize}
+\item правила, определяющие допустимые конструкции языка. «Защищенный» синтаксис предполагает, что предложения языка строятся по правилам, которые позволяют автоматически выявлять большой процент ошибок в программах.
+\item совокупность правил, определяющих допустимые конструкции (слова, предложения) языка, его форму
+\item правила, определяющие допустимые конструкции языка, построенные из символов его алфавита.  
+\end{itemize}
 
+{\bf{Семантика}}
+\begin{itemize}
+\item правила, определяющие смысл синтаксически корректных предложений. Ясная или «интуитивно-понятная» семантика – семантика, позволяющая без большого труда определять смысл программы или «читать» ее.
+\item совокупность правил, определяющих смысл синтаксически корректных конструкций языка, его содержание.
+\end{itemize}
+
+{\bf{Алфавит языка Паскаль  }}
+
+\begin{enumerate}
+\item латинские буквы без различия строчных и прописных;
+\item арабские цифры: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9;
+\item шестнадцатеричные цифры: 0..9, а..f или A..F;
+\item специальные символы: + - * / = := ; и т. д.;
+\item служебные слова: do, while, begin, end и т. д.
+\end{enumerate}
+
+{\bf{Описание синтаксиса языка}}
+
+Включает определение алфавита и правил построения различных конструкций языка из символов алфавита и более простых конструкций. Для этого обычно используют либо форму Бэкуса-Наура (БНФ), либо синтаксические диаграммы
+
+Форма Бэкуса-Наура – описание конструкции БНФ состоит из символов алфавита языка, названий более простых конструкций и двух специальных знаков:
+\begin{itemize}
+\item « ::= » - читаетсяя как “может быть заменено на”
+\item « | » - читается как “или”; 
+\end{itemize}
+В самом описании:
+
+\begin{itemize}
+\item Символы алфавита (они же терминальные символы или терминалы) записываются в неизменном виде.
+\item Названия конструкций языка (нетерминальные символы или нетерминалы), которые определяются через некоторые другие символы, при записи заключают в угловые скобки (“<..>”).
+\end{itemize}
+Пример: правило построения конструкции <целое>
+\begin{itemize}
+    \item <целое> ::= <знак> < целое без знака> | <целое без знака>
+    \item <целое без знака> ::= <целое без знака> <цифра> | <цифра>
+    \item <цифра> ::= 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 0
+    \item <знак>  ::= + | -
+\end{itemize}
+
+{\bf{Синтаксические диаграммы}}
+отображают правила построения конструкций в более наглядной форме.
+На такой диаграмме:
+\begin{itemize}
+\item символы алфавита изображают блоками в овальных рамках
+\item названия конструкций в прямоугольных рамках
+\item правила построения конструкций – в виде линии со стрелками на концах
+\item разветвление линии означает, что при построении конструкции есть варианты 
+\end{itemize}
+Пример: синтаксическая диаграмма, иллюстрирующая первые два правила описания конструкции <целое>
+\image{exm1.png}{170}
 
 \subsection{Представление  данных  в  языке  Pascal:  константы  и  переменные.  Классификация  ска-
 лярных типов данных, их внутреннее представление, операции над ними. Примеры.} 
 
-
+Константы – определяются один раз и не изменяются во время выполнения программы.
+Используют следующие типы констант:
+\begin{itemize}
+    \item Целые и вещественные десятичные числа;
+    \item Шестнадцатеричные числа;
+    \item Логические константы;
+    \item Символьные константы – (записываются либо в апострофах, либо в виде соответствующих кодов по таблице ASCII);
+    \item Строки символов – записываются в апострофах;
+    \item Конструкторы множеств;
+    \item Нулевой адрес – nil.
+\end{itemize}
+Константы используются в двух формах: 
+\begin{itemize}
+    \item Литерал – представляет собой значение константы, записанное непосредственно в программе;
+    \item Поименованные константы объявляются в инструкции раздела описаний const. Обращение к ним осуществляется по имени (идентификатору).
+\end{itemize}
 
 \subsection{Совместимость типов данных и операции преобразования типов. Примеры. }
 
