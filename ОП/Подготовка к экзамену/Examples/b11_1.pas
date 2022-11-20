@@ -9,5 +9,5 @@ Begin
 End;
 Begin
   iwanttoclosemycompandgoSLEEP(1);
-  writeln(iwanttoget30bofexam(2))
+  writeln(iwanttoget30bofexam(2));
 End.

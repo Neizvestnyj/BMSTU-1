@@ -1,7 +1,6 @@
 
 Var real_: real;
   integer_: integer;
-  char_: char;
 Begin
   real_ := 12.6;
   integer_ := trunc(real_);
