@@ -74,7 +74,6 @@ Begin
   If sp = Nil Then size := 0
   Else
     Begin
-      i := 1;
       While sp^.pNext <> Nil Do
         Begin
           inc(i);

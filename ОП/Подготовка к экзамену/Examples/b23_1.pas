@@ -2,7 +2,6 @@
 Var Fmas, Gmas: array Of Integer;
   F,G: text;
   Fi,Gi,Fk,Gk: integer;
-  fl: boolean;
 
 Begin
   assign(F,'F');
@@ -37,7 +36,6 @@ Begin
       readln(G,Gmas[Gi]);
       write(Gmas[Gi],' ');
     End;
-  writeln();
   close(F);
   close(G);
 End.
