@@ -55,7 +55,10 @@ Begin
 End;
 
 Var your_mas: masInt;
+  your_int: Int;
 Begin
+  your_int.create(10);
+  your_int.print;
   your_mas.create;
   your_mas.print;
 End.

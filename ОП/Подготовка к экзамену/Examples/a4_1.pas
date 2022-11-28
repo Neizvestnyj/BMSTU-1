@@ -43,7 +43,10 @@ Begin
 End;
 
 Var your_IntPReal: IntPReal;
+  your_int: Int;
 Begin
+  your_int.create(100);
+  your_int.print;
   your_IntPReal.create(11,1.25);
   your_IntPReal.print;
 End.
