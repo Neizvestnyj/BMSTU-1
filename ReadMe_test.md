@@ -9,6 +9,7 @@
 1. [Ангем](https://github.com/pluttan/BMSTU-1/tree/master/АнГем)
    1. [Графики к лекции 7](https://github.com/pluttan/BMSTU-1/tree/master/АнГем/Графики%20к%20лекции%207) Тут представлены все графики, которые мы рисовали на лекции, понадобится для подготовки к зачету
    2. [РК1](https://github.com/pluttan/BMSTU-1/tree/master/АнГем/РК1) Файлик с ответами на все теоритические вопросы.
+   3. [РК2](https://github.com/pluttan/BMSTU-1/tree/master/АнГем/РК2) Файлик с ответами на все теоритические вопросы.
 2. [ИнЯз](https://github.com/pluttan/BMSTU-1/tree/master/ИнЯз) Тут презентации, которые нам давали делать
 3. [Инфа](https://github.com/pluttan/BMSTU-1/tree/master/Инфа)
    1. [РК1](https://github.com/pluttan/BMSTU-1/tree/master/Инфа/РК1]) Тут находится скрипт, который решает первый РК, просто подставьте свой текст в пременную `word` 
