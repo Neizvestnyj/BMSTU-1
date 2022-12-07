@@ -275,4 +275,7 @@ TSWLatexianTemp*
 # Makeindex log files
 *.lpz
 
+# Language dictionaries
+dictionaries
+
 .DS_Store
